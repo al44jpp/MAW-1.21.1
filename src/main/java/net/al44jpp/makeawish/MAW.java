@@ -1,5 +1,7 @@
-package net.al44jpp.MAW;
+package net.al44jpp.makeawish;
 
+import net.al44jpp.makeawish.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,14 +32,17 @@ public class MAW {
         modEventBus.addListener(this::commonSetup);
 
 
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
+
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        ModItems.register(modEventBus);
+
+
+
+
         modEventBus.addListener(this::addCreative);
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
+
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -47,6 +52,9 @@ public class MAW {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.wish);
+        }
 
     }
 

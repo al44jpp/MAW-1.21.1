@@ -1,4 +1,4 @@
-package net.al44jpp.MAW;
+package net.al44jpp.makeawish;
 
 import java.util.List;
 
