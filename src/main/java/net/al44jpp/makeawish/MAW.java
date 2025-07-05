@@ -1,5 +1,6 @@
 package net.al44jpp.makeawish;
 
+import net.al44jpp.makeawish.block.ModBlocks;
 import net.al44jpp.makeawish.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -36,6 +37,7 @@ public class MAW {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
 
@@ -54,6 +56,10 @@ public class MAW {
     private void addCreative(BuildCreativeModeTabContentsEvent event){
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.wish);
+            event.accept(ModItems.wish_fragment);
+        }
+        if (event.getTabKey()== CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.wish_crystal_block);
         }
 
     }
