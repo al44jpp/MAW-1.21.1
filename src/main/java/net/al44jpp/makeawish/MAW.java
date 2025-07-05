@@ -61,6 +61,9 @@ public class MAW {
         if (event.getTabKey()== CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.wish_crystal_block);
         }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.stone_wish_ore);
+        }
 
     }
 

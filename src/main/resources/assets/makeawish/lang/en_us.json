@@ -2,5 +2,6 @@
   "item.makeawish.wish": "Wish",
   "item.makeawish.wish_fragment": "Wish fragment",
 
-  "block.makeawish.wish_crystal_block": "Block of wish crystal"
+  "block.makeawish.wish_crystal_block": "Block of wish crystal",
+  "block.makeawish.stone_wish_ore": "Wish crystal ore"
 }

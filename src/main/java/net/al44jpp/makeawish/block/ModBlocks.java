@@ -20,6 +20,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> wish_crystal_block =registerBlock("wish_crystal_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
+    public static final DeferredBlock<Block> stone_wish_ore =registerBlock("stone_wish_ore",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
 
 
 
