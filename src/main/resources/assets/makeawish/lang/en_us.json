@@ -1,7 +1,10 @@
 {
   "item.makeawish.wish": "Wish",
   "item.makeawish.wish_fragment": "Wish fragment",
+  "item.makeawish.night_crystal": "night crystal",
 
   "block.makeawish.wish_crystal_block": "Block of wish crystal",
-  "block.makeawish.stone_wish_ore": "Wish crystal ore"
+  "block.makeawish.stone_wish_ore": "Wish crystal ore",
+
+  "creativetab.makeawish.wish_items": "al44jpp's make a wish"
 }

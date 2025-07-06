@@ -19,6 +19,9 @@ public class ModItems {
     public static final DeferredItem<Item> wish_fragment = ITEMS.register("wish_fragment",
             ()-> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> night_crystal = ITEMS.register("night_crystal",
+            ()-> new Item(new Item.Properties()));
+
     //end of that field
 
     public static void register(IEventBus eventBus) {

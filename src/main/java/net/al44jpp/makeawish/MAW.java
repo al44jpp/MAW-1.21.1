@@ -1,6 +1,7 @@
 package net.al44jpp.makeawish;
 
 import net.al44jpp.makeawish.block.ModBlocks;
+import net.al44jpp.makeawish.item.ModCreativeModeTabs;
 import net.al44jpp.makeawish.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -35,6 +36,8 @@ public class MAW {
 
 
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

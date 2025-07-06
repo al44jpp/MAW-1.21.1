@@ -1,0 +1,52 @@
+package net.al44jpp.makeawish.item;
+
+import net.al44jpp.makeawish.MAW;
+import net.al44jpp.makeawish.block.ModBlocks;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
+
+public class ModCreativeModeTabs {
+    public static  final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MAW.MOD_ID);
+
+
+
+    public static final Supplier<CreativeModeTab> WISH_ITEMS_TAB = CREATIVE_MODE_TAB.register("wish_items_tab",
+            ()-> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.wish.get()))
+                    .title(Component.translatable("creativetab.makeawish.wish_items"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.wish);
+                        output.accept(ModItems.wish_fragment);
+                        output.accept(ModBlocks.stone_wish_ore);
+                        output.accept(ModBlocks.wish_crystal_block);
+                        output.accept(ModItems.night_crystal);
+
+                    })
+                    //.withTabsBefore(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID, "wish_items_tab"))
+
+
+                    .build());
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void register(IEventBus eventBus){
+        CREATIVE_MODE_TAB.register(eventBus);
+    }
+}
