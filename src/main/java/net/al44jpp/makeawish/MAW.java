@@ -60,12 +60,14 @@ public class MAW {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.wish);
             event.accept(ModItems.wish_fragment);
+            event.accept(ModItems.night_crystal);
         }
         if (event.getTabKey()== CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.wish_crystal_block);
+            event.accept(ModBlocks.night_crystal_block);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModBlocks.stone_wish_ore);
+            event.accept(ModBlocks.stone_night_crystal_ore);
+            event.accept(ModBlocks.deepslate_night_crystal_ore);
         }
 
     }

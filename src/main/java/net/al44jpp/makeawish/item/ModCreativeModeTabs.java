@@ -24,8 +24,9 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.wish);
                         output.accept(ModItems.wish_fragment);
-                        output.accept(ModBlocks.stone_wish_ore);
-                        output.accept(ModBlocks.wish_crystal_block);
+                        output.accept(ModBlocks.stone_night_crystal_ore);
+                        output.accept(ModBlocks.deepslate_night_crystal_ore);
+                        output.accept(ModBlocks.night_crystal_block);
                         output.accept(ModItems.night_crystal);
 
                     })

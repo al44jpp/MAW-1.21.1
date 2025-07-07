@@ -2,9 +2,11 @@ package net.al44jpp.makeawish.block;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -17,11 +19,16 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MAW.MOD_ID);
 
 
-    public static final DeferredBlock<Block> wish_crystal_block =registerBlock("wish_crystal_block",
+    public static final DeferredBlock<Block> night_crystal_block =registerBlock("night_crystal_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
-    public static final DeferredBlock<Block> stone_wish_ore =registerBlock("stone_wish_ore",
-            () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> stone_night_crystal_ore =registerBlock("stone_night_crystal_ore",
+            () -> new DropExperienceBlock(UniformInt.of(15,25)
+                    ,BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> deepslate_night_crystal_ore =registerBlock("deepslate_night_crystal_ore",
+            () -> new DropExperienceBlock(UniformInt.of(15,25)
+                    ,BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
 
 

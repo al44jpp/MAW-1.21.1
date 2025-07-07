@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "makeawish:night_crystal"
+    }
+  },
+  "pattern": [
+    "HH",
+    "HH"
+  ],
+  "result":{
+    "count:": 1,
+    "id": "makeawish:night_crystal_block"
+  }
+}

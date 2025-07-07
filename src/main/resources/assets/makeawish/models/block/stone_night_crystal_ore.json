@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "makeawish:block/stone_wish_ore"
+    "all": "makeawish:block/stone_night_crystal_ore"
   }
 }
