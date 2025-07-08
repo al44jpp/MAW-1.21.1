@@ -1,7 +1,9 @@
 package net.al44jpp.makeawish.item;
 
 import net.al44jpp.makeawish.MAW;
+import net.al44jpp.makeawish.item.custom.night_crystalItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -20,7 +22,7 @@ public class ModItems {
             ()-> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> night_crystal = ITEMS.register("night_crystal",
-            ()-> new Item(new Item.Properties()));
+            ()-> new night_crystalItem(new Item.Properties().rarity(Rarity.UNCOMMON)));
 
     //end of that field
 
