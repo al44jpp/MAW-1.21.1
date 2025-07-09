@@ -51,7 +51,7 @@ public class night_crystalItem extends Item {
             // Spawn particles
             if (level instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(ParticleTypes.WARPED_SPORE,player.getX(),player.getY(),player.getZ(), 120, 0.5, 1, 0.5, 0);
-                serverLevel.sendParticles(ParticleTypes.FIREWORK,player.getX(),player.getY(),player.getZ(), 15, 0.5, 1, 0.5, 0);
+                serverLevel.sendParticles(ParticleTypes.FIREWORK,player.getX(),player.getY(),player.getZ(), 15, 0.5, 2, 0.5, 0);
             }
             item.consume(1,null);
         }

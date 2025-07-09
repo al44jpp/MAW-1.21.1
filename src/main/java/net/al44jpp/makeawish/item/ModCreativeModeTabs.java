@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.deepslate_night_crystal_ore);
                         output.accept(ModBlocks.night_crystal_block);
                         output.accept(ModItems.night_crystal);
+                        output.accept(ModItems.wish_apple);
 
                     })
                     //.withTabsBefore(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID, "wish_items_tab"))
