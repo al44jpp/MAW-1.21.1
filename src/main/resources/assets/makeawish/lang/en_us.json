@@ -2,10 +2,13 @@
   "item.makeawish.wish": "Wish",
   "item.makeawish.wish_fragment": "Wish fragment",
   "item.makeawish.night_crystal": "night crystal",
+  "item.makeawish.wish_apple": "The infinite wished apple",
 
   "block.makeawish.night_crystal_block": "Block of night crystal",
   "block.makeawish.stone_night_crystal_ore": "night crystal crystal ore",
   "block.makeawish.deepslate_night_crystal_ore": "deepslate night crystal ore",
+
+  "tooltip.makeawish.bight_crystal": "during the night, can be consumed for a small period of invulnerability and some buffs.",
 
   "creativetab.makeawish.wish_items": "al44jpp's make a wish"
 }

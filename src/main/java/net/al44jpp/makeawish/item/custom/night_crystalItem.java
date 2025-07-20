@@ -23,10 +23,13 @@ import net.minecraft.world.entity.Interaction;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.WorldDimensions;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class night_crystalItem extends Item {
 
@@ -54,11 +57,19 @@ public class night_crystalItem extends Item {
                 serverLevel.sendParticles(ParticleTypes.FIREWORK,player.getX(),player.getY(),player.getZ(), 15, 0.5, 2, 0.5, 0);
             }
             item.consume(1,null);
+            return InteractionResultHolder.success(item);
+
         }
+        return InteractionResultHolder.pass(item);
 
-        return InteractionResultHolder.success(item);
 
 
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        tooltipComponents.add(Component.translatable("tooltip.makeawish.bight_crystal"));
     }
 }
 

@@ -8,11 +8,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+
+import java.util.List;
 
 public class wish_appleItem extends Item {
 
@@ -27,11 +30,11 @@ public class wish_appleItem extends Item {
             if (livingEntity instanceof Player player){
                 if(player instanceof ServerPlayer serverPlayer){
                     assert (player != null);
-                    player.getCooldowns().addCooldown(this,200);
+                    player.getCooldowns().addCooldown(this,2000);
 
 
                     player.getInventory().add(new ItemStack(ModItems.wish_apple.get()));
-                    player.sendSystemMessage(Component.literal("you should have received the apple"));
+                    player.sendSystemMessage(Component.literal("the power of the apple fades... It needs to recover."));
                     serverPlayer.connection.send(new ClientboundContainerSetContentPacket(
                             player.containerMenu.containerId,
                             player.containerMenu.getStateId(),
@@ -47,6 +50,12 @@ public class wish_appleItem extends Item {
 
     @Override
     public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.BOW;
+        return UseAnim.EAT;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        tooltipComponents.add(Component.translatable("A §dlegendary item§r summoned from the §k hi_gl:)§r by a wish. This apple will keep you full for §equite some time§r after eaten."));
     }
 }
