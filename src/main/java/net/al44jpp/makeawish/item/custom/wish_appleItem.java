@@ -1,6 +1,8 @@
 package net.al44jpp.makeawish.item.custom;
 
 import net.al44jpp.makeawish.item.ModItems;
+import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundContainerSetContentPacket;
 import net.minecraft.server.level.ServerPlayer;
@@ -41,6 +43,7 @@ public class wish_appleItem extends Item {
 
                     player.getInventory().add(new ItemStack(ModItems.wish_apple.get()));
                     player.sendSystemMessage(Component.literal("the power of the apple fades... It needs to recover."));
+                    level.playSound(null,player.getX(),player.getY(),player.getZ(),SoundEvents.BEACON_DEACTIVATE,SoundSource.PLAYERS);
                     serverPlayer.connection.send(new ClientboundContainerSetContentPacket(
                             player.containerMenu.containerId,
                             player.containerMenu.getStateId(),
@@ -56,7 +59,7 @@ public class wish_appleItem extends Item {
 
     @Override
     public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.EAT;
+        return UseAnim.BOW;
     }
 
     @Override
@@ -65,5 +68,12 @@ public class wish_appleItem extends Item {
         tooltipComponents.add(Component.translatable("A §dlegendary item§r summoned from the §k hi_gl:)§r by a wish. This apple will keep you full for §equite some time§r after eaten."));
     }
 
-
+    @Override
+    public void onUseTick(Level level, LivingEntity livingEntity, ItemStack stack, int remainingUseDuration) {
+        super.onUseTick(level, livingEntity, stack, remainingUseDuration);
+        if (remainingUseDuration%4 == 0){
+            level.playSound(null, livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.AMBIENT, 20f, 33-remainingUseDuration);
+            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, stack),livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(),0,0,0);
+        }
+    }
 }
