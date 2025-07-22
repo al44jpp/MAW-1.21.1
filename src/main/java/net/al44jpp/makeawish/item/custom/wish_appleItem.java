@@ -5,6 +5,7 @@ import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundContainerSetContentPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -73,7 +74,11 @@ public class wish_appleItem extends Item {
         super.onUseTick(level, livingEntity, stack, remainingUseDuration);
         if (remainingUseDuration%4 == 0){
             level.playSound(null, livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.AMBIENT, 20f, 33-remainingUseDuration);
-            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, stack),livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(),0,0,0);
+            if (level instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(ParticleTypes.WARPED_SPORE,livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(), 120, 0.5, 1, 0.5, 0);
+                serverLevel.sendParticles(ParticleTypes.FIREWORK,livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(), 15, 0.5, 2, 0.5, 0);
+            }
         }
     }
 }
+
