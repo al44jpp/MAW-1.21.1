@@ -30,6 +30,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(15,25)
                     ,BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final DeferredBlock<Block> starwood_leaves =registerBlock("starwood_leaves",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.GRASS).noLootTable()));
+
 
 
 

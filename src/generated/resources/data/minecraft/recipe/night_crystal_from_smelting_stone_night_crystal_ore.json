@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "group": "night_crystal",
+  "ingredient": {
+    "item": "makeawish:stone_night_crystal_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "makeawish:night_crystal"
+  }
+}
