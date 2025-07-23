@@ -29,6 +29,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.starwood_plank.get(),
                 block -> createSingleItemTable(ModBlocks.starwood_plank));
 
+        dropSelf(ModBlocks.starwood_stairs.get());
+        add(ModBlocks.starwood_slab.get(),
+                block -> createSlabItemTable(ModBlocks.starwood_slab.get()));
+
+        dropSelf(ModBlocks.starwood_button.get());
+        dropSelf(ModBlocks.starwood_pressure_plate.get());
+
+        dropSelf(ModBlocks.starwood_trapdoor.get());
+        add(ModBlocks.starwood_door.get(),
+                block ->createDoorTable(ModBlocks.starwood_door.get()));
+
+
+
 
 
 

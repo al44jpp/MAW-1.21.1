@@ -29,6 +29,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.night_crystal_block);
                         output.accept(ModItems.night_crystal);
                         output.accept(ModItems.wish_apple);
+                        output.accept(ModBlocks.starwood_plank);
+                        output.accept(ModBlocks.starwood_stairs);
+                        output.accept(ModBlocks.starwood_slab);
+                        output.accept(ModBlocks.starwood_pressure_plate);
+                        output.accept(ModBlocks.starwood_button);
+                        output.accept(ModBlocks.starwood_fence);
+                        output.accept(ModBlocks.starwood_fence_gate);
+                        output.accept(ModBlocks.starwood_door);
+                        output.accept(ModBlocks.starwood_trapdoor);
+
 
                     })
                     //.withTabsBefore(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID, "wish_items_tab"))

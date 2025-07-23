@@ -5,10 +5,10 @@ import net.al44jpp.makeawish.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -37,6 +37,36 @@ public class ModBlocks {
     public static final DeferredBlock<Block> starwood_plank =registerBlock("starwood_plank",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f).sound(SoundType.WOOD)));
+
+    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+    public static final DeferredBlock<StairBlock> starwood_stairs=registerBlock("starwood_stairs",
+            ()-> new StairBlock(ModBlocks.starwood_plank.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
+    public static final DeferredBlock<SlabBlock> starwood_slab=registerBlock("starwood_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
+
+
+    public static final DeferredBlock<PressurePlateBlock> starwood_pressure_plate=registerBlock("starwood_pressure_plate",
+            ()-> new PressurePlateBlock(BlockSetType.ACACIA,
+                    BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD)));
+    public static final DeferredBlock<ButtonBlock> starwood_button=registerBlock("starwood_button",
+            ()-> new ButtonBlock(BlockSetType.ACACIA,100,
+                    BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD).noCollission()));
+
+
+    public static final DeferredBlock<FenceBlock> starwood_fence=registerBlock("starwood_fence",
+            ()-> new FenceBlock(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
+    public static final DeferredBlock<FenceGateBlock> starwood_fence_gate=registerBlock("starwood_fence_gate",
+            ()-> new FenceGateBlock(WoodType.ACACIA,BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
+
+
+
+    public static final DeferredBlock<DoorBlock> starwood_door=registerBlock("starwood_door",
+            ()-> new DoorBlock(BlockSetType.ACACIA,BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> starwood_trapdoor=registerBlock("starwood_trapdoor",
+            ()-> new TrapDoorBlock(BlockSetType.ACACIA,
+                    BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD).noOcclusion()));
 
 
 
