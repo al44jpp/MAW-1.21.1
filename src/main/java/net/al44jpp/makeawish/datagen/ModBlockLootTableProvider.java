@@ -26,7 +26,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.stone_night_crystal_ore.get(), ModItems.night_crystal.get()));
         add(ModBlocks.night_crystal_block.get(),
                 block ->createSingleItemTableWithSilkTouch(ModBlocks.night_crystal_block.get(),ModItems.night_crystal.get(), ConstantValue.exactly(4.0f)) );
-
+        add(ModBlocks.starwood_plank.get(),
+                block -> createSingleItemTable(ModBlocks.starwood_plank));
 
 
 

@@ -1,9 +1,11 @@
 package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.MAW;
+import net.al44jpp.makeawish.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -20,7 +22,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         //this is where to add items to tags:
 
-        //tag(ModTags.Items.EXISTING_TAG
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.starwood_plank.asItem());
         //  .add(ModItems.EXISTING_ITEM.get())
         //  .add(ModItems.EXISTING_ITEM.get())
         //              ...

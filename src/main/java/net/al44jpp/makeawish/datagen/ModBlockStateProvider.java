@@ -19,6 +19,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockWithItem(ModBlocks.deepslate_night_crystal_ore);
         BlockWithItem(ModBlocks.night_crystal_block);
         BlockWithItem(ModBlocks.stone_night_crystal_ore);
+        //leaves made custom
+        BlockWithItem(ModBlocks.starwood_plank);
 
     }
 

@@ -1,3 +1,5 @@
-// 1.21.1	2025-07-23T00:37:50.887875	Tags for minecraft:block mod id makeawish
+// 1.21.1	2025-07-23T19:03:24.9797883	Tags for minecraft:block mod id makeawish
+0874d3c1cd8d32b03a5eca39a11cd993fd710f82 data/minecraft/tags/block/mineable/axe.json
 51265dd339ae90258153bde9b97ac063fdd5c11d data/minecraft/tags/block/mineable/pickaxe.json
 51265dd339ae90258153bde9b97ac063fdd5c11d data/minecraft/tags/block/needs_diamond_tool.json
+0874d3c1cd8d32b03a5eca39a11cd993fd710f82 data/minecraft/tags/block/planks.json

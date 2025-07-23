@@ -34,6 +34,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.GRASS).noLootTable()));
 
+    public static final DeferredBlock<Block> starwood_plank =registerBlock("starwood_plank",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f).sound(SoundType.WOOD)));
+
 
 
 
