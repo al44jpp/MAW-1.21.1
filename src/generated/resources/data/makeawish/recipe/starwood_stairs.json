@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "starwood",
+  "key": {
+    "#": {
+      "item": "makeawish:starwood_plank"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "makeawish:starwood_stairs"
+  }
+}

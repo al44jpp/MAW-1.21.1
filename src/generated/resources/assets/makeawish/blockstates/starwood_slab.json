@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "makeawish:block/starwood_slab"
+    },
+    "type=double": {
+      "model": "makeawish:block/starwood_plank"
+    },
+    "type=top": {
+      "model": "makeawish:block/starwood_slab_top"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "makeawish:block/starwood_pressure_plate"
+    },
+    "powered=true": {
+      "model": "makeawish:block/starwood_pressure_plate_down"
+    }
+  }
+}

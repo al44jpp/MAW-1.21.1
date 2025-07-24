@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "starwood",
+  "ingredients": [
+    {
+      "item": "makeawish:starwood_plank"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "makeawish:starwood_button"
+  }
+}

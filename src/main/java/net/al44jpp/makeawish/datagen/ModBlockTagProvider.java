@@ -35,5 +35,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.stone_night_crystal_ore.get())
                 .add(ModBlocks.deepslate_night_crystal_ore.get());
 
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.starwood_fence.get());
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.starwood_fence_gate.get());
+
     }
 }

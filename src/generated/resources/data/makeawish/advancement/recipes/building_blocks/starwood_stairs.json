@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_starwood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "makeawish:starwood_plank"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "makeawish:starwood_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_starwood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "makeawish:starwood_stairs"
+    ]
+  }
+}

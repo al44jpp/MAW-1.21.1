@@ -9,8 +9,16 @@
   "block.makeawish.deepslate_night_crystal_ore": "deepslate night crystal ore",
   "block.makeawish.starwood_leaves": "starwood leaves",
   "block.makeawish.starwood_plank": "starwood planks",
+  "block.makeawish.starwood_stairs": "starwood stairs",
+  "block.makeawish.starwood_slab": "starwood slab",
+  "block.makeawish.starwood_button": "starwood button",
+  "block.makeawish.starwood_pressure_plate": "starwood pressure plate",
+  "block.makeawish.starwood_fence": "starwood fence",
+  "block.makeawish.starwood_fence_gate": "starwood fence gate",
+  "block.makeawish.starwood_door": "starwood door",
+  "block.makeawish.starwood_trapdoor": "starwood trapdoor",
 
-  "tooltip.makeawish.bight_crystal": "during the night, can be consumed for a small period of invulnerability and some buffs.",
+  "tooltip.makeawish.night_crystal": "during the night, can be consumed for a small period of invulnerability and some buffs.",
 
   "creativetab.makeawish.wish_items": "al44jpp's make a wish"
 }

@@ -32,6 +32,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock(ModBlocks.starwood_button.get(),blockTexture(ModBlocks.starwood_plank.get()));
         pressurePlateBlock(ModBlocks.starwood_pressure_plate.get(),blockTexture(ModBlocks.starwood_plank.get()));
 
+        fenceBlock(ModBlocks.starwood_fence.get(),blockTexture(ModBlocks.starwood_plank.get()));
+        fenceGateBlock(ModBlocks.starwood_fence_gate.get(),blockTexture(ModBlocks.starwood_plank.get()));
+
+        doorBlockWithRenderType(ModBlocks.starwood_door.get(),modLoc("block/starwood_door_bottom"),modLoc("block/starwood_door_top"),"cutout");
+
+        trapdoorBlockWithRenderType(ModBlocks.starwood_trapdoor.get(),modLoc("block/starwood_trapdoor"),true,"cutout");
 
 
         BlockItem(ModBlocks.starwood_stairs);

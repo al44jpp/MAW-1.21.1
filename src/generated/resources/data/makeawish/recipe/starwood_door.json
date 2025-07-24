@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "starwood",
+  "key": {
+    "#": {
+      "item": "makeawish:starwood_plank"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "makeawish:starwood_door"
+  }
+}

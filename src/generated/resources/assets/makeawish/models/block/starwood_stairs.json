@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "makeawish:block/starwood_plank",
+    "side": "makeawish:block/starwood_plank",
+    "top": "makeawish:block/starwood_plank"
+  }
+}

@@ -1,5 +1,7 @@
-// 1.21.1	2025-07-23T00:25:30.9181852	Item Models: makeawish
+// 1.21.1	2025-07-24T13:38:43.5716721	Item Models: makeawish
 3b291aec0775425585eba5c3548288840625a7b5 assets/makeawish/models/item/night_crystal.json
+4c214707e4a4b7a022fd40ed94715fefd4e90027 assets/makeawish/models/item/starwood_button.json
+13f5702127806a59b4d193c0930db1a7b2c26781 assets/makeawish/models/item/starwood_door.json
 6b086c33fc1ffe91fc65065d6b0aae62cec6a389 assets/makeawish/models/item/wish.json
 4cfd81db8ed36d0f44651181e5487b473a170965 assets/makeawish/models/item/wish_apple.json
 3bde9cc2e702c707745ea24fd023de5e6ab4cb88 assets/makeawish/models/item/wish_fragment.json

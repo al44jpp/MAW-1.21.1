@@ -1,5 +1,13 @@
-// 1.21.1	2025-07-23T19:03:24.9818077	Loot Tables
+// 1.21.1	2025-07-24T12:31:34.8572326	Loot Tables
 b13594690cd416667164e1db5b2a776f26a390c3 data/makeawish/loot_table/blocks/deepslate_night_crystal_ore.json
 d7413099689ce20ed870580cf988259ee12cbeed data/makeawish/loot_table/blocks/night_crystal_block.json
+a3688520d11b5448482f945266463b4265a4e330 data/makeawish/loot_table/blocks/starwood_button.json
+3d6b246d9ed173c55eac7c2cd5569241a9473a51 data/makeawish/loot_table/blocks/starwood_door.json
+1b9b8ea551540e8ab3d82dab58d3607a832452b2 data/makeawish/loot_table/blocks/starwood_fence.json
+8a05ed99424deabe3aedd79620e6f4757cb308a7 data/makeawish/loot_table/blocks/starwood_fence_gate.json
 247828922294fde2bacaabe458006dd84a113796 data/makeawish/loot_table/blocks/starwood_plank.json
+cf802bddd85ccc659b797cb4d3743caccae623bc data/makeawish/loot_table/blocks/starwood_pressure_plate.json
+911935c52dc17173bc2d488f2a04ac35c2e4ee36 data/makeawish/loot_table/blocks/starwood_slab.json
+9b390ac130401f40dccef203e3392c9c1acdea85 data/makeawish/loot_table/blocks/starwood_stairs.json
+38baec5fc0554ac8d56657cae93f5e4ccd28fc6e data/makeawish/loot_table/blocks/starwood_trapdoor.json
 f56885a98f217c4878e241916960be148baaeaca data/makeawish/loot_table/blocks/stone_night_crystal_ore.json
