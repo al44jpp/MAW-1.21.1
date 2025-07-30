@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.wish_fragment.get());
         //fenceItem(ModBlocks.starwood_fence,ModBlocks.starwood_plank);
         buttonItem(ModBlocks.starwood_button,ModBlocks.starwood_plank);
+        fenceItem(ModBlocks.starwood_fence,ModBlocks.starwood_plank);
 
         basicItem(ModBlocks.starwood_door.asItem());
     }

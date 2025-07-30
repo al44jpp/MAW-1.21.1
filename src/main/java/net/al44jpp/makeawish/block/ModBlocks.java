@@ -31,8 +31,10 @@ public class ModBlocks {
                     ,BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> starwood_leaves =registerBlock("starwood_leaves",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.GRASS).noLootTable()));
+            () -> new LeavesBlock(BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.GRASS).noLootTable().ignitedByLava().noOcclusion()));
+
+    public static final DeferredBlock<Block> starwood_log =registerBlock("starwood_log",
+            ()-> new Block(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD).noLootTable()));
 
     public static final DeferredBlock<Block> starwood_plank =registerBlock("starwood_plank",
             () -> new Block(BlockBehaviour.Properties.of()

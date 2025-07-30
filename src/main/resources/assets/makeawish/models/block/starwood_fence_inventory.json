@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/fence_inventory",
   "textures": {
-    "texture": "makeawish:block/starwood_plank"
+    "texture": "makeawish:block/starwood_planks"
   }
 }
