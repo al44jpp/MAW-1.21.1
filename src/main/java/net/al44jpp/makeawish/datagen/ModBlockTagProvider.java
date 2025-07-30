@@ -25,10 +25,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.deepslate_night_crystal_ore.get());
 
         tag(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.starwood_plank.get());
+                .add(ModBlocks.starwood_plank.get())
+                .add(ModBlocks.starwood_log.get());
 
         tag(BlockTags.PLANKS)
                 .add(ModBlocks.starwood_plank.get());
+
+        tag(BlockTags.LOGS)
+                .add(ModBlocks.starwood_log.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.night_crystal_block.get())

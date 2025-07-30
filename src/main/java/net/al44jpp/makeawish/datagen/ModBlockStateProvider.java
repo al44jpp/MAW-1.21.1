@@ -5,6 +5,7 @@ import net.al44jpp.makeawish.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -38,6 +39,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(ModBlocks.starwood_door.get(),modLoc("block/starwood_door_bottom"),modLoc("block/starwood_door_top"),"cutout");
 
         trapdoorBlockWithRenderType(ModBlocks.starwood_trapdoor.get(),modLoc("block/starwood_trapdoor"),true,"cutout");
+
+        logBlock(ModBlocks.starwood_log.get());
 
 
         BlockItem(ModBlocks.starwood_stairs);

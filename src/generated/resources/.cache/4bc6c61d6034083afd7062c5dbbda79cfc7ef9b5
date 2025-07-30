@@ -1,10 +1,11 @@
-// 1.21.1	2025-07-24T12:31:34.8603241	Block States: makeawish
+// 1.21.1	2025-07-30T17:30:34.5599558	Block States: makeawish
 485a72f43768d051cfe0d8b4387780bda89534e8 assets/makeawish/blockstates/deepslate_night_crystal_ore.json
 eabe3b0c4b88b347dd78b60e5e68a744ad24c0e4 assets/makeawish/blockstates/night_crystal_block.json
 863df7dbd0f8f8a26eaa7a1d6970ad2f15e2d497 assets/makeawish/blockstates/starwood_button.json
 3f677d5baf37f80f4b34449328d4ccf539bfd1bc assets/makeawish/blockstates/starwood_door.json
 6d2f820e9c84898a360f97b2a3f48aa370d37a44 assets/makeawish/blockstates/starwood_fence.json
 3840f8e31702fd2f1286a5ac352a7bcc450197de assets/makeawish/blockstates/starwood_fence_gate.json
+3ad83d6ceaf5b36327920cf43aa76b9938929aa5 assets/makeawish/blockstates/starwood_log.json
 4c95653561b70f72c0a4fd47773d53bc6a3971b9 assets/makeawish/blockstates/starwood_plank.json
 dc1223cb90d53639c86f0bc7b7a426b8f60c52ab assets/makeawish/blockstates/starwood_pressure_plate.json
 f01e992da7768c9c8d38ccf9368130b888d59cc3 assets/makeawish/blockstates/starwood_slab.json
@@ -29,6 +30,8 @@ beaf9a6eda822d9e06efa6d139791db0237ff817 assets/makeawish/models/block/starwood_
 b12fc519d14d9776f9a8f427568a51d42330b751 assets/makeawish/models/block/starwood_fence_gate_wall_open.json
 628f9befc5adcdc7637f81ba9045c39612c9bbeb assets/makeawish/models/block/starwood_fence_post.json
 5655726e3f0b7a76eabdd98a5f26955f39ad044e assets/makeawish/models/block/starwood_fence_side.json
+6610a0065a6f6d15388e36c0934ab4855ffb90b3 assets/makeawish/models/block/starwood_log.json
+409e47745c7a27408aa51a4dbada53bf4fe98a67 assets/makeawish/models/block/starwood_log_horizontal.json
 7dd87fabe7d536ea90613a7f576936e215ab56b4 assets/makeawish/models/block/starwood_plank.json
 dc1efac36b98d25a8592ec24ea479ca8d52a9950 assets/makeawish/models/block/starwood_pressure_plate.json
 52bfa173f1c9ebdedaf69f416f12a2e3c6b43910 assets/makeawish/models/block/starwood_pressure_plate_down.json

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "makeawish:block/starwood_log_top",
+    "side": "makeawish:block/starwood_log"
+  }
+}
