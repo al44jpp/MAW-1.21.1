@@ -51,6 +51,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockItem(ModBlocks.starwood_fence_gate);
         //BlockItem(ModBlocks.starwood_door);
         BlockItem(ModBlocks.starwood_trapdoor,"_bottom");
+        BlockItem(ModBlocks.starwood_log);
 
     }
 

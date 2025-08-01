@@ -24,11 +24,13 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.wish);
                         output.accept(ModItems.wish_fragment);
+                        output.accept(ModItems.wish_apple);
                         output.accept(ModBlocks.stone_night_crystal_ore);
                         output.accept(ModBlocks.deepslate_night_crystal_ore);
                         output.accept(ModBlocks.night_crystal_block);
                         output.accept(ModItems.night_crystal);
-                        output.accept(ModItems.wish_apple);
+                        output.accept(ModBlocks.starwood_log);
+                        output.accept(ModBlocks.starwood_leaves);
                         output.accept(ModBlocks.starwood_plank);
                         output.accept(ModBlocks.starwood_stairs);
                         output.accept(ModBlocks.starwood_slab);
@@ -38,6 +40,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.starwood_fence_gate);
                         output.accept(ModBlocks.starwood_door);
                         output.accept(ModBlocks.starwood_trapdoor);
+
 
 
                     })
