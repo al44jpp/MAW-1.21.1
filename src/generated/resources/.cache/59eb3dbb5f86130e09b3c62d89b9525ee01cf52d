@@ -1,10 +1,11 @@
-// 1.21.1	2025-08-06T23:20:35.2303569	Loot Tables
+// 1.21.1	2025-08-07T11:45:21.300824	Loot Tables
 b13594690cd416667164e1db5b2a776f26a390c3 data/makeawish/loot_table/blocks/deepslate_night_crystal_ore.json
 d7413099689ce20ed870580cf988259ee12cbeed data/makeawish/loot_table/blocks/night_crystal_block.json
 a3688520d11b5448482f945266463b4265a4e330 data/makeawish/loot_table/blocks/starwood_button.json
 3d6b246d9ed173c55eac7c2cd5569241a9473a51 data/makeawish/loot_table/blocks/starwood_door.json
 1b9b8ea551540e8ab3d82dab58d3607a832452b2 data/makeawish/loot_table/blocks/starwood_fence.json
 8a05ed99424deabe3aedd79620e6f4757cb308a7 data/makeawish/loot_table/blocks/starwood_fence_gate.json
+f003ab9d0687da506a59709b0e7ae593a56f1763 data/makeawish/loot_table/blocks/starwood_leaves.json
 df2d4f676a78ac3df5e5f5fbfd036042aafb8802 data/makeawish/loot_table/blocks/starwood_log.json
 247828922294fde2bacaabe458006dd84a113796 data/makeawish/loot_table/blocks/starwood_plank.json
 cf802bddd85ccc659b797cb4d3743caccae623bc data/makeawish/loot_table/blocks/starwood_pressure_plate.json

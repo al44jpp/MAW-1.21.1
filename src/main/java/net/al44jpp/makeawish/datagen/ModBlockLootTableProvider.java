@@ -39,8 +39,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.starwood_trapdoor.get());
         dropSelf(ModBlocks.starwood_sapling.get());
 
-        //add(ModBlocks.starwood_sapling.get(),
-                //block -> createLeavesDrops(block, ModBlocks.starwood_sapling.get(),NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.starwood_leaves.get(),
+                block -> createLeavesDrops(block, ModBlocks.starwood_sapling.get(),NORMAL_LEAVES_SAPLING_CHANCES));
 
         dropSelf(ModBlocks.starwood_log.get());
         add(ModBlocks.starwood_door.get(),
