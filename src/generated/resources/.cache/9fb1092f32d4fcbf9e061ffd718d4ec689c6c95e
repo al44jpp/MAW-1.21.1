@@ -1,4 +1,5 @@
-// 1.21.1	2025-07-24T12:31:34.8593263	Recipes
+// 1.21.1	2025-08-07T23:21:39.3236888	Recipes
+e4def4e9d575514f75a62a4df929206239bfd66f data/makeawish/advancement/recipes/building_blocks/starwood_plank.json
 4641874086034389958f49f1b0d9b6c0c69e9c6f data/makeawish/advancement/recipes/building_blocks/starwood_slab.json
 dd5ddb5fb978ba617eea56bcb5247fcc3f55a17e data/makeawish/advancement/recipes/building_blocks/starwood_stairs.json
 0d8b4a01dd7986f402b674cb29a81908273d4365 data/makeawish/advancement/recipes/decorations/starwood_fence.json
@@ -13,6 +14,7 @@ a7b6d7661f79b324577b90cf1671caa996d37169 data/makeawish/recipe/starwood_button.j
 3db5fb2391f054a06e89d3effd196b4a8a204895 data/makeawish/recipe/starwood_door.json
 db986d7a0443190006a9be7066f942af81ae44c8 data/makeawish/recipe/starwood_fence.json
 a835dac63b2db033922fe4e1d53c73a2ebbb53cb data/makeawish/recipe/starwood_fence_gate.json
+8b0af53e52f8ada2b83227abf8f3ea78056d37a9 data/makeawish/recipe/starwood_plank.json
 37587891de4c9b9e76c43c92e521e3c2897843b3 data/makeawish/recipe/starwood_pressure_plate.json
 2dbb3c2e85dbf29390dab7e0480add998327e899 data/makeawish/recipe/starwood_slab.json
 1cd320b50e9eded3ccb56fe6927f6bc61097e8f0 data/makeawish/recipe/starwood_stairs.json

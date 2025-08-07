@@ -1,7 +1,8 @@
-// 1.21.1	2025-07-30T17:30:34.5563505	Tags for minecraft:block mod id makeawish
+// 1.21.1	2025-08-07T23:19:47.7811757	Tags for minecraft:block mod id makeawish
+58df1d46f79d6f9c308ce00aab5972f0e15bc3db data/makeawish/tags/block/starwood_logs.json
 341492a3381328c499cd9731fb317008f97705e5 data/minecraft/tags/block/fences.json
 e83369b7eefb0a0b04e9973a96ff65a55ee0cdd8 data/minecraft/tags/block/fence_gates.json
-58df1d46f79d6f9c308ce00aab5972f0e15bc3db data/minecraft/tags/block/logs.json
+58df1d46f79d6f9c308ce00aab5972f0e15bc3db data/minecraft/tags/block/logs_that_burn.json
 172049337dc3a4a3e4dee1c8c20bf70aff29d428 data/minecraft/tags/block/mineable/axe.json
 51265dd339ae90258153bde9b97ac063fdd5c11d data/minecraft/tags/block/mineable/pickaxe.json
 51265dd339ae90258153bde9b97ac063fdd5c11d data/minecraft/tags/block/needs_diamond_tool.json

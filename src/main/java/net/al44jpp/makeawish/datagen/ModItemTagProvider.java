@@ -2,6 +2,7 @@ package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.block.ModBlocks;
+import net.al44jpp.makeawish.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -23,7 +24,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         //this is where to add items to tags:
 
-        tag(ItemTags.LOGS)
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.starwood_log.asItem());
+
+        tag(ModTags.Items.STARWOOD_LOGS)
                 .add(ModBlocks.starwood_log.asItem());
 
         tag(ItemTags.PLANKS)

@@ -2,9 +2,12 @@ package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.block.ModBlocks;
 import net.al44jpp.makeawish.item.ModItems;
+import net.al44jpp.makeawish.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.fml.common.Mod;
@@ -22,8 +25,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
 
-        List<ItemLike> NIGHT_CRYSTAL_SMELTABLES = List.of(ModBlocks.deepslate_night_crystal_ore.get(),
-                ModBlocks.stone_night_crystal_ore.get());
+        List<ItemLike> NIGHT_CRYSTAL_SMELTABLES = List.of(
+                ModBlocks.deepslate_night_crystal_ore.get(),
+                ModBlocks.stone_night_crystal_ore.get()
+        );
 
 
 
@@ -49,6 +54,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         doorBuilder(ModBlocks.starwood_door,Ingredient.of(ModBlocks.starwood_plank)).group("starwood").unlockedBy("has_starwood",has(ModBlocks.starwood_plank)).save(recipeOutput);
         trapdoorBuilder(ModBlocks.starwood_trapdoor,Ingredient.of(ModBlocks.starwood_plank)).group("starwood").unlockedBy("has_starwood",has(ModBlocks.starwood_plank)).save(recipeOutput);
+
+
+        planksFromLog(recipeOutput,ModBlocks.starwood_plank.get(), ModTags.Items.STARWOOD_LOGS,4);
 
         oreSmelting(recipeOutput,NIGHT_CRYSTAL_SMELTABLES,RecipeCategory.MISC,ModItems.night_crystal.get(),3.0f,200,"night_crystal");
         oreBlasting(recipeOutput,NIGHT_CRYSTAL_SMELTABLES,RecipeCategory.MISC,ModItems.night_crystal.get(),3.0f,50,"night_crystal");

@@ -26,7 +26,7 @@ public class ModBiomeModifiers {
                 HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.STARWOOD_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
-    }
+            }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
         return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID, name));
