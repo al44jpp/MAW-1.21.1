@@ -2,6 +2,7 @@ package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.block.ModBlocks;
+import net.al44jpp.makeawish.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -31,7 +32,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.PLANKS)
                 .add(ModBlocks.starwood_plank.get());
 
-        tag(BlockTags.LOGS)
+        tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.starwood_log.get());
+
+        tag((ModTags.Blocks.STARWOOD_LOGS))
                 .add(ModBlocks.starwood_log.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)

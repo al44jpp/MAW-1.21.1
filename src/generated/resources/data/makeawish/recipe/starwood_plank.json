@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "makeawish:starwood_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "makeawish:starwood_plank"
+  }
+}
