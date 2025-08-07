@@ -2,9 +2,11 @@ package net.al44jpp.makeawish.block;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.item.ModItems;
+import net.al44jpp.makeawish.worldgen.tree.ModTreeGrowers;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -31,14 +33,16 @@ public class ModBlocks {
                     ,BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> starwood_leaves =registerBlock("starwood_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.GRASS).noLootTable().ignitedByLava().noOcclusion()));
+            () -> new LeavesBlock(BlockBehaviour.Properties.of().strength(0.2f).sound(SoundType.GRASS).ignitedByLava().noOcclusion().noLootTable()));
 
     public static final DeferredBlock<RotatedPillarBlock> starwood_log =registerBlock("starwood_log",
-            ()-> new RotatedPillarBlock(BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD)));
+            ()-> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+
+    public static final DeferredBlock<Block> starwood_sapling = registerBlock("starwood_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.STARWOOD, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     public static final DeferredBlock<Block> starwood_plank =registerBlock("starwood_plank",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2f).sound(SoundType.WOOD)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
 
     //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 

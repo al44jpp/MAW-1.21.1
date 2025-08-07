@@ -2,11 +2,9 @@ package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.block.ModBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.PressurePlateBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -41,6 +39,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(ModBlocks.starwood_trapdoor.get(),modLoc("block/starwood_trapdoor"),true,"cutout");
 
         logBlock(ModBlocks.starwood_log.get());
+        saplingBlock(ModBlocks.starwood_sapling);
 
 
         BlockItem(ModBlocks.starwood_stairs);
@@ -49,10 +48,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockItem(ModBlocks.starwood_pressure_plate);
         BlockItem(ModBlocks.starwood_fence);
         BlockItem(ModBlocks.starwood_fence_gate);
-        //BlockItem(ModBlocks.starwood_door);
         BlockItem(ModBlocks.starwood_trapdoor,"_bottom");
         BlockItem(ModBlocks.starwood_log);
 
+
+    }
+
+    private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     private void BlockWithItem(DeferredBlock<?> deferredBlock){

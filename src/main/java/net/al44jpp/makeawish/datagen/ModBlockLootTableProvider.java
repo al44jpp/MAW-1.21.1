@@ -9,6 +9,7 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import java.util.Set;
@@ -36,6 +37,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.starwood_fence.get());
         dropSelf(ModBlocks.starwood_fence_gate.get());
         dropSelf(ModBlocks.starwood_trapdoor.get());
+        dropSelf(ModBlocks.starwood_sapling.get());
+
+        //add(ModBlocks.starwood_sapling.get(),
+                //block -> createLeavesDrops(block, ModBlocks.starwood_sapling.get(),NORMAL_LEAVES_SAPLING_CHANCES));
 
         dropSelf(ModBlocks.starwood_log.get());
         add(ModBlocks.starwood_door.get(),

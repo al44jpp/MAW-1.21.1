@@ -6,6 +6,7 @@ import net.al44jpp.makeawish.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -21,17 +22,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.wish_apple.get());
         basicItem(ModItems.wish.get());
         basicItem(ModItems.wish_fragment.get());
-        //fenceItem(ModBlocks.starwood_fence,ModBlocks.starwood_plank);
         buttonItem(ModBlocks.starwood_button,ModBlocks.starwood_plank);
         fenceItem(ModBlocks.starwood_fence,ModBlocks.starwood_plank);
 
         basicItem(ModBlocks.starwood_door.asItem());
+        saplingItem(ModBlocks.starwood_sapling);
     }
 
 
 
 
-
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"block/" + item.getId().getPath()));
+    }
 
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
