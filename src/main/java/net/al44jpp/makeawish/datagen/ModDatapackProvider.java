@@ -2,6 +2,7 @@ package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.worldgen.ModBiomeModifiers;
+import net.al44jpp.makeawish.worldgen.ModBiomes;
 import net.al44jpp.makeawish.worldgen.ModConfiguredFeatures;
 import net.al44jpp.makeawish.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
@@ -22,8 +23,8 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
-
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+            .add(Registries.BIOME, ModBiomes::bootstrap);
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(MAW.MOD_ID));
