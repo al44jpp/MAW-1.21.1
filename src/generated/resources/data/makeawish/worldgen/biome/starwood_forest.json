@@ -8,12 +8,12 @@
   },
   "downfall": 0.6,
   "effects": {
-    "fog_color": 12638463,
-    "foliage_color": 10387789,
-    "grass_color": 9470285,
-    "sky_color": 7907327,
+    "fog_color": 5,
+    "foliage_color": 4145012,
+    "grass_color": 4145012,
+    "sky_color": 5,
     "water_color": 4159204,
-    "water_fog_color": 329011
+    "water_fog_color": 4145089
   },
   "features": [
     [],
@@ -26,15 +26,6 @@
     [],
     [],
     [
-      "minecraft:ore_dirt",
-      "minecraft:ore_gravel",
-      "minecraft:ore_granite_upper",
-      "minecraft:ore_granite_lower",
-      "minecraft:ore_diorite_upper",
-      "minecraft:ore_diorite_lower",
-      "minecraft:ore_andesite_upper",
-      "minecraft:ore_andesite_lower",
-      "minecraft:ore_tuff",
       "minecraft:ore_coal_upper",
       "minecraft:ore_coal_lower",
       "minecraft:ore_iron_upper",
@@ -60,12 +51,10 @@
     ],
     [
       "minecraft:patch_grass_forest",
-      "minecraft:forest_flowers",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
-      "minecraft:glow_lichen",
       "minecraft:seagrass_simple",
       "makeawish:starwood_placed"
     ]

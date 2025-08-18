@@ -26,14 +26,6 @@ public class ModPlacedFeatures {
         register(context,STARWOOD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STARWOOD_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(6,0.05f,2),
                         ModBlocks.starwood_sapling.get()));
-
-
-
-
-
-
-
-
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

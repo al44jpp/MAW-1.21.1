@@ -3,6 +3,8 @@ package net.al44jpp.makeawish;
 import net.al44jpp.makeawish.block.ModBlocks;
 import net.al44jpp.makeawish.item.ModCreativeModeTabs;
 import net.al44jpp.makeawish.item.ModItems;
+import net.al44jpp.makeawish.worldgen.terrablender.ModOverworldRegion;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -20,6 +22,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import terrablender.api.Regions;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MAW.MOD_ID)
@@ -42,7 +45,7 @@ public class MAW {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-
+        Regions.register(new ModOverworldRegion(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"starwood_region"),3));
 
 
         modEventBus.addListener(this::addCreative);

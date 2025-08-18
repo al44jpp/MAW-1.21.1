@@ -42,22 +42,22 @@ public class ModBiomes {
 
         // --- vanilla-like features for a forest / birch forest ---
         // Add the default carvers and lakes (caves, lakes)
-        BiomeDefaultFeatures.addDefaultCarversAndLakes(generation);
+        BiomeDefaultFeatures.addDefaultCarversAndLakes(generation); ;;;;
 
         // Add the forest grass patches (tall grass / grass)
-        BiomeDefaultFeatures.addForestGrass(generation);
+        BiomeDefaultFeatures.addForestGrass(generation); ;;;;
 
         // Add forest flowers (roses, lilac, peony, lilies of the valley where applicable)
-        BiomeDefaultFeatures.addForestFlowers(generation);
+       //                                                   BiomeDefaultFeatures.addForestFlowers(generation);
 
         // Add mushrooms (small mushrooms) and other small vegetation extras
-        BiomeDefaultFeatures.addDefaultMushrooms(generation);
-        BiomeDefaultFeatures.addDefaultExtraVegetation(generation);
+        BiomeDefaultFeatures.addDefaultMushrooms(generation); ;;;;
+        BiomeDefaultFeatures.addDefaultExtraVegetation(generation); ;;;;
 
         // Add standard underground features & ores / springs, etc.
-        BiomeDefaultFeatures.addDefaultUndergroundVariety(generation);
-        BiomeDefaultFeatures.addDefaultOres(generation);
-        BiomeDefaultFeatures.addDefaultSprings(generation);
+        //                                                  BiomeDefaultFeatures.addDefaultUndergroundVariety(generation);
+        BiomeDefaultFeatures.addDefaultOres(generation); ;;;;
+        BiomeDefaultFeatures.addDefaultSprings(generation); ;;;;
 
         // If you want to specifically include seagrass/water plants near water edges:
         BiomeDefaultFeatures.addDefaultSeagrass(generation);
@@ -94,12 +94,12 @@ public class ModBiomes {
 
         // Build the Effect / Biome and register
         BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
-                .fogColor(12638463)
+                .fogColor(0x000005)
                 .waterColor(4159204)
-                .waterFogColor(329011)
-                .skyColor(7907327)
-                .foliageColorOverride(10387789)
-                .grassColorOverride(9470285)
+                .waterFogColor(0x3f3fc1)
+                .skyColor(0x000005)
+                .foliageColorOverride(0x3F3F74)
+                .grassColorOverride(0x3F3F74)
                 .build();
 
         Biome biome = new Biome.BiomeBuilder()
