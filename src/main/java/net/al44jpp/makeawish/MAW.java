@@ -45,7 +45,7 @@ public class MAW {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        Regions.register(new ModOverworldRegion(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"starwood_region"),3));
+        Regions.register(new ModOverworldRegion(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"starwood_region"),1));
 
 
         modEventBus.addListener(this::addCreative);
