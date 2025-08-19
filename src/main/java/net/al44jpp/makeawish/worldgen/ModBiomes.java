@@ -5,6 +5,8 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.OrePlacements;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -49,6 +51,8 @@ public class ModBiomes {
 
         // Add forest flowers (roses, lilac, peony, lilies of the valley where applicable)
        //                                                   BiomeDefaultFeatures.addForestFlowers(generation);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.FLOWER_FOREST_FLOWERS);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.FLOWER_PLAINS);
 
         // Add mushrooms (small mushrooms) and other small vegetation extras
         BiomeDefaultFeatures.addDefaultMushrooms(generation); ;;;;
@@ -56,15 +60,23 @@ public class ModBiomes {
 
         // Add standard underground features & ores / springs, etc.
         //                                                  BiomeDefaultFeatures.addDefaultUndergroundVariety(generation);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_ANDESITE_LOWER);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_ANDESITE_UPPER);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_DIORITE_LOWER);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_DIORITE_UPPER);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_GRANITE_LOWER);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_GRANITE_UPPER);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_GRAVEL);
+
         BiomeDefaultFeatures.addDefaultOres(generation); ;;;;
         BiomeDefaultFeatures.addDefaultSprings(generation); ;;;;
 
         // If you want to specifically include seagrass/water plants near water edges:
-        BiomeDefaultFeatures.addDefaultSeagrass(generation);
+        BiomeDefaultFeatures.addDefaultSeagrass(generation); ;;;;
 
         // --- your custom tree feature already referenced earlier ---
         // ensure your ModPlacedFeatures.STARWOOD_PLACED_KEY is a ResourceKey<PlacedFeature>
-        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.STARWOOD_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.STARWOOD_PLACED_KEY); ;;;;
 
         // --- mob spawns (copied from vanilla birch forest spawn table) ---
         MobSpawnSettings.Builder mobs = new MobSpawnSettings.Builder();
