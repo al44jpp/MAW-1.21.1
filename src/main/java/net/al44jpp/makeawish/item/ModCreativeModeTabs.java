@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.night_crystal);
                         output.accept(ModBlocks.starwood_log);
                         output.accept(ModBlocks.starwood_leaves);
+                        output.accept(ModBlocks.starwood_sapling);
                         output.accept(ModBlocks.starwood_plank);
                         output.accept(ModBlocks.starwood_stairs);
                         output.accept(ModBlocks.starwood_slab);

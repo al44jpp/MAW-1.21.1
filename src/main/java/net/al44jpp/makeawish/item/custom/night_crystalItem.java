@@ -69,7 +69,7 @@ public class night_crystalItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-        tooltipComponents.add(Component.translatable("tooltip.makeawish.bight_crystal"));
+        tooltipComponents.add(Component.translatable("tooltip.makeawish.night_crystal"));
     }
 }
 
