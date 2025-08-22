@@ -1,13 +1,18 @@
 package net.al44jpp.makeawish.item.custom;
 
 import com.mojang.blaze3d.shaders.Effect;
+import net.al44jpp.makeawish.block.ModBlocks;
 import net.al44jpp.makeawish.item.ModItems;
+import net.al44jpp.makeawish.worldgen.ModBiomes;
 import net.minecraft.client.gui.font.providers.UnihexProvider;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Position;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -26,6 +31,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.gameevent.EntityPositionSource;
 import net.minecraft.world.level.levelgen.WorldDimensions;
 import org.jetbrains.annotations.NotNull;
 
@@ -42,7 +50,7 @@ public class night_crystalItem extends Item {
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, @NotNull InteractionHand usedHand) {
         ItemStack item = player.getItemInHand(InteractionHand.MAIN_HAND);
-        if (level.isNight()) {
+        if (level.isNight()||level.getBiome(player.blockPosition()).is(ModBiomes.STARWOOD_FOREST)) {
 
             player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 300 * 20));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 45 * 20));

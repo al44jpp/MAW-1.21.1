@@ -68,6 +68,8 @@ public class ModBiomes {
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_GRANITE_UPPER);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, OrePlacements.ORE_GRAVEL);
 
+        //generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.NIGHT_CRYSTAL_ORE_PLACED);
+
         BiomeDefaultFeatures.addDefaultOres(generation); ;;;;
         BiomeDefaultFeatures.addDefaultSprings(generation); ;;;;
 
