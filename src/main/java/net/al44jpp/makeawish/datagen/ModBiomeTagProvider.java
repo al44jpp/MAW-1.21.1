@@ -1,11 +1,9 @@
 package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.MAW;
-import net.al44jpp.makeawish.worldgen.ModBiomes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
-import net.minecraft.tags.BiomeTags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -20,7 +18,6 @@ public class ModBiomeTagProvider extends BiomeTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         //tag(BiomeTags.IS_OVERWORLD).add(ModBiomes.STARWOOD_FOREST);
-
         //tag(BiomeTags.IS_NETHER).add(ModBiomes.STARWOOD_FOREST);
     }
 }
