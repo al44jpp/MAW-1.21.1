@@ -49,5 +49,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.starwood_fence_gate.get());
 
+            //for tools
+        tag(ModTags.Blocks.NEEDS_NIGHT_CRYSTAL_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+        tag(ModTags.Blocks.INCORRECT_FOR_NIGHT_CRYSTAL_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_NIGHT_CRYSTAL_TOOL);
+
     }
 }

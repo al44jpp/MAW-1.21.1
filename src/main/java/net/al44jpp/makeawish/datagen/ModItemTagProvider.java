@@ -2,6 +2,7 @@ package net.al44jpp.makeawish.datagen;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.block.ModBlocks;
+import net.al44jpp.makeawish.item.ModItems;
 import net.al44jpp.makeawish.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -32,8 +33,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.starwood_plank.asItem());
-        //  .add(ModItems.EXISTING_ITEM.get())
-        //  .add(ModItems.EXISTING_ITEM.get())
-        //              ...
+            //for tools
+        tag(ItemTags.SWORDS)
+                .add(ModItems.night_sword.asItem());
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.night_pickaxe.asItem());
+        tag(ItemTags.AXES)
+                .add(ModItems.night_axe.asItem());
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.night_shovel.asItem());
+
     }
 }

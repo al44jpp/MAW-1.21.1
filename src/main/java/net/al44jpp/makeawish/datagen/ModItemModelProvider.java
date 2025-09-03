@@ -10,6 +10,7 @@ import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -27,6 +28,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModBlocks.starwood_door.asItem());
         saplingItem(ModBlocks.starwood_sapling);
+
+            //tools
+        handheldItem(ModItems.night_sword);
+        handheldItem(ModItems.night_pickaxe);
+        handheldItem(ModItems.night_axe);
+        handheldItem(ModItems.night_shovel);
     }
 
 
@@ -49,5 +56,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(DeferredItem<?> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

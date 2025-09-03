@@ -25,6 +25,10 @@ public class ModTags {
 
         public static final TagKey<Block> STARWOOD_LOGS = createTag("starwood_logs");
 
+        public static final TagKey<Block> NEEDS_NIGHT_CRYSTAL_TOOL = createTag("needs_night_crystal_tool");
+        public static final TagKey<Block> INCORRECT_FOR_NIGHT_CRYSTAL_TOOL = createTag("incorrect_for_night_crystal_tool");
+
+
         private static TagKey<Block> createTag (String name){
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,name));
         }

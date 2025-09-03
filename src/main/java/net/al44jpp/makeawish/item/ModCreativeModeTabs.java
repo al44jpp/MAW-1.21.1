@@ -25,6 +25,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.wish);
                         output.accept(ModItems.wish_fragment);
                         output.accept(ModItems.wish_apple);
+                        output.accept(ModItems.night_sword);
+                        output.accept(ModItems.night_pickaxe);
+                        output.accept(ModItems.night_axe);
+                        output.accept(ModItems.night_shovel);
                         output.accept(ModBlocks.stone_night_crystal_ore);
                         output.accept(ModBlocks.deepslate_night_crystal_ore);
                         output.accept(ModBlocks.night_crystal_block);
