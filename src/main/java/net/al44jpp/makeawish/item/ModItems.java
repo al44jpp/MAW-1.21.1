@@ -2,6 +2,7 @@ package net.al44jpp.makeawish.item;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.item.custom.ModToolTiers;
+import net.al44jpp.makeawish.item.custom.nightSwordItem;
 import net.al44jpp.makeawish.item.custom.night_crystalItem;
 import net.al44jpp.makeawish.item.custom.wish_appleItem;
 import net.minecraft.world.item.*;
@@ -31,7 +32,7 @@ public class ModItems {
 
         //tools
     public static final DeferredItem<SwordItem> night_sword = ITEMS.register("night_sword",
-                () -> new SwordItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,3,-2.4F))));
+                () -> new nightSwordItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,3,-2.4F))));
     public static final DeferredItem<PickaxeItem> night_pickaxe = ITEMS.register("night_pickaxe",
             () -> new PickaxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1,-2.8F))));
     public static final DeferredItem<AxeItem> night_axe = ITEMS.register("night_axe",
