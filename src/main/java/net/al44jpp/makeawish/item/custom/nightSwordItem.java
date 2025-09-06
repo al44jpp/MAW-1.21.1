@@ -3,18 +3,27 @@ package net.al44jpp.makeawish.item.custom;
 import com.mojang.datafixers.kinds.App;
 import net.al44jpp.makeawish.worldgen.ModBiomes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.commands.ScheduleCommand;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageEffects;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageSources;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.CustomizeGuiOverlayEvent;
+import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.Executors;
@@ -28,6 +37,9 @@ public class nightSwordItem extends SwordItem {
         super(tier, properties);
     }
 
+
+    final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+
     @Override
     public float getAttackDamageBonus(Entity target, float damage, DamageSource damageSource) {
         if (!target.level().isNight() && !target.level().getBiome(target.blockPosition()).is(ModBiomes.STARWOOD_FOREST)){
@@ -36,21 +48,24 @@ public class nightSwordItem extends SwordItem {
         return(5);
     }
 
+
     @Override
     public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, LivingEntity attacker) {
         Level level = attacker.level();
-        if((level.isNight() || level.getBiome(attacker.blockPosition()).is(ModBiomes.STARWOOD_FOREST)) && level instanceof ServerLevel serverLevel){
-            EntityType<LightningBolt> entityType = EntityType.LIGHTNING_BOLT;
-            target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS,300,0));
+        LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
+        assert lightningBolt != null;
+        lightningBolt.setVisualOnly(true);
 
 
-            final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
-            executorService.scheduleWithFixedDelay(()->{
-                entityType.spawn(serverLevel,target.blockPosition(), MobSpawnType.TRIGGERED);
-            },1,0,TimeUnit.SECONDS);
-
-
-
+        if((level.isNight() || level.getBiome(attacker.blockPosition()).is(ModBiomes.STARWOOD_FOREST)) && level instanceof ServerLevel level_server){
+            executorService.schedule(()->{
+                lightningBolt.setPos(target.getX(),target.getY(),target.getZ());
+                level.addFreshEntity(lightningBolt);
+                target.hurt(target.damageSources().lightningBolt(),0.01f);
+                target.addEffect(new MobEffectInstance(MobEffects.DARKNESS,300,0));
+                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,300,2));
+                target.addEffect(new MobEffectInstance(MobEffects.GLOWING,60,0));
+            },1000,TimeUnit.MILLISECONDS);
         }
         return super.hurtEnemy(stack, target, attacker);
     }

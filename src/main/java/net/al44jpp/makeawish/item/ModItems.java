@@ -1,10 +1,7 @@
 package net.al44jpp.makeawish.item;
 
 import net.al44jpp.makeawish.MAW;
-import net.al44jpp.makeawish.item.custom.ModToolTiers;
-import net.al44jpp.makeawish.item.custom.nightSwordItem;
-import net.al44jpp.makeawish.item.custom.night_crystalItem;
-import net.al44jpp.makeawish.item.custom.wish_appleItem;
+import net.al44jpp.makeawish.item.custom.*;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -36,7 +33,7 @@ public class ModItems {
     public static final DeferredItem<PickaxeItem> night_pickaxe = ITEMS.register("night_pickaxe",
             () -> new PickaxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1,-2.8F))));
     public static final DeferredItem<AxeItem> night_axe = ITEMS.register("night_axe",
-            () -> new AxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,5,-3.0F))));
+            () -> new nightAxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,5,-3.0F))));
     public static final DeferredItem<ShovelItem> night_shovel = ITEMS.register("night_shovel",
             () -> new ShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.5f,-3.0F))));
 
