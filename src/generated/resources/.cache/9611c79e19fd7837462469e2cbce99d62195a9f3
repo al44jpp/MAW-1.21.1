@@ -1,6 +1,7 @@
-// 1.21.1	2025-09-02T20:24:42.8380274	Tags for minecraft:item mod id makeawish
+// 1.21.1	2025-09-08T19:35:53.2552974	Tags for minecraft:item mod id makeawish
 58df1d46f79d6f9c308ce00aab5972f0e15bc3db data/makeawish/tags/item/starwood_logs.json
 72807154e22845647e0e4c4719620b41c7a70412 data/minecraft/tags/item/axes.json
+38b9c7c1fc90d4ad03b8f3f12b4ac8132c889146 data/minecraft/tags/item/hoes.json
 58df1d46f79d6f9c308ce00aab5972f0e15bc3db data/minecraft/tags/item/logs_that_burn.json
 e5f40328fe084a9cba155042c660db4f155b6fde data/minecraft/tags/item/pickaxes.json
 0874d3c1cd8d32b03a5eca39a11cd993fd710f82 data/minecraft/tags/item/planks.json

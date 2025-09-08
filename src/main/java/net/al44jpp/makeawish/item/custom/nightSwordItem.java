@@ -16,16 +16,16 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SpawnEggItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.CustomizeGuiOverlayEvent;
 import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -37,37 +37,35 @@ public class nightSwordItem extends SwordItem {
         super(tier, properties);
     }
 
-
     final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
     @Override
-    public float getAttackDamageBonus(Entity target, float damage, DamageSource damageSource) {
-        if (!target.level().isNight() && !target.level().getBiome(target.blockPosition()).is(ModBiomes.STARWOOD_FOREST)){
-            return super.getAttackDamageBonus(target, damage, damageSource);
-        }
-        return(5);
-    }
-
-
-    @Override
     public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, LivingEntity attacker) {
-        Level level = attacker.level();
-        LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
-        assert lightningBolt != null;
-        lightningBolt.setVisualOnly(true);
+        if(attacker instanceof Player player) {
 
+            Level level = attacker.level();
+            LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
+            assert lightningBolt != null;
+            lightningBolt.setVisualOnly(true);
 
-        if((level.isNight() || level.getBiome(attacker.blockPosition()).is(ModBiomes.STARWOOD_FOREST)) && level instanceof ServerLevel level_server){
-            executorService.schedule(()->{
-                lightningBolt.setPos(target.getX(),target.getY(),target.getZ());
-                level.addFreshEntity(lightningBolt);
-                target.hurt(target.damageSources().lightningBolt(),0.01f);
-                target.addEffect(new MobEffectInstance(MobEffects.DARKNESS,300,0));
-                target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,300,2));
-                target.addEffect(new MobEffectInstance(MobEffects.GLOWING,60,0));
-            },1000,TimeUnit.MILLISECONDS);
+            if ((level.isNight() || level.getBiome(attacker.blockPosition()).is(ModBiomes.STARWOOD_FOREST)) && level instanceof ServerLevel level_server && !player.getCooldowns().isOnCooldown(this)) {
+                executorService.schedule(() -> {
+                    lightningBolt.setPos(target.getX(), target.getY(), target.getZ());
+                    level.addFreshEntity(lightningBolt);
+                    target.hurt(target.damageSources().lightningBolt(), 5f);
+                    target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 300, 0));
+                    target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2));
+                    target.addEffect(new MobEffectInstance(MobEffects.GLOWING, 60, 0));
+                }, 1000, TimeUnit.MILLISECONDS);
+                player.getCooldowns().addCooldown(this,100);
+            }
         }
+
         return super.hurtEnemy(stack, target, attacker);
     }
-
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        tooltipComponents.add(Component.translatable("tooltip.makeawish.night_sword"));
+    }
 }

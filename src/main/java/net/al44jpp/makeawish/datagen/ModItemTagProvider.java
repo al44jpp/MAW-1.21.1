@@ -33,15 +33,18 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.starwood_plank.asItem());
+
+
             //for tools
-        tag(ItemTags.SWORDS)
-                .add(ModItems.night_sword.asItem());
-        tag(ItemTags.PICKAXES)
-                .add(ModItems.night_pickaxe.asItem());
-        tag(ItemTags.AXES)
-                .add(ModItems.night_axe.asItem());
-        tag(ItemTags.SHOVELS)
-                .add(ModItems.night_shovel.asItem());
+        tag(ItemTags.SWORDS).add(ModItems.night_sword.asItem());
+
+        tag(ItemTags.PICKAXES).add(ModItems.night_pickaxe.asItem());
+
+        tag(ItemTags.AXES).add(ModItems.night_axe.asItem());
+
+        tag(ItemTags.SHOVELS).add(ModItems.night_shovel.asItem());
+
+        tag(ItemTags.HOES).add(ModItems.night_hoe.asItem());
 
     }
 }

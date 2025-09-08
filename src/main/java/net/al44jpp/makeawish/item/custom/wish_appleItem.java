@@ -45,7 +45,8 @@ public class wish_appleItem extends Item {
                     player.getInventory().add(new ItemStack(ModItems.wish_apple.get()));
                     player.sendSystemMessage(Component.literal("the power of the apple fades... It needs to recover."));
                     level.playSound(null,player.getX(),player.getY(),player.getZ(),SoundEvents.BEACON_DEACTIVATE,SoundSource.PLAYERS);
-                    serverPlayer.connection.send(new ClientboundContainerSetContentPacket(
+
+                    serverPlayer.connection.send(new ClientboundContainerSetContentPacket(//refreshes the player's slot on client
                             player.containerMenu.containerId,
                             player.containerMenu.getStateId(),
                             player.containerMenu.getItems(),

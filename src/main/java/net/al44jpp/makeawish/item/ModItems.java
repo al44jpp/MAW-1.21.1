@@ -36,7 +36,8 @@ public class ModItems {
             () -> new nightAxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,5,-3.0F))));
     public static final DeferredItem<ShovelItem> night_shovel = ITEMS.register("night_shovel",
             () -> new ShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.5f,-3.0F))));
-
+    public static final DeferredItem<HoeItem> night_hoe = ITEMS.register("night_hoe",
+            () -> new HoeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.0f,0.0F))));
 
     //end of that field
 

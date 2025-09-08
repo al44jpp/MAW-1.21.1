@@ -25,7 +25,9 @@
   "block.makeawish.starwood_log": "starwood log",
 
 
-  "tooltip.makeawish.night_crystal": "during the night, can be consumed for a small period of invulnerability and some buffs.",
+  "tooltip.makeawish.night_crystal": "A magical crystal that awakens its powers at night.",
+  "tooltip.makeawish.night_axe": "A powerful tool created using night essence. This axe uses the power of the night to gradually heal its owner.",
+  "tooltip.makeawish.night_sword": "A powerful tool created using night essence. This sword uses the power of the night to deal additional damage and disorientate foes.",
 
   "creativetab.makeawish.wish_items": "al44jpp's make a wish"
 }
