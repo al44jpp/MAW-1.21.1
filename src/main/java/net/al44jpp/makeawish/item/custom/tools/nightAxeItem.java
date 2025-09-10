@@ -1,8 +1,7 @@
-package net.al44jpp.makeawish.item.custom;
+package net.al44jpp.makeawish.item.custom.tools;
 
 import net.al44jpp.makeawish.worldgen.ModBiomes;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;

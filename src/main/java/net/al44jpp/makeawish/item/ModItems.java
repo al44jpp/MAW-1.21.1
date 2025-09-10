@@ -2,6 +2,9 @@ package net.al44jpp.makeawish.item;
 
 import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.item.custom.*;
+import net.al44jpp.makeawish.item.custom.tools.nightAxeItem;
+import net.al44jpp.makeawish.item.custom.tools.nightPickaxeItem;
+import net.al44jpp.makeawish.item.custom.tools.nightSwordItem;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -29,15 +32,15 @@ public class ModItems {
 
         //tools
     public static final DeferredItem<SwordItem> night_sword = ITEMS.register("night_sword",
-                () -> new nightSwordItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,3,-2.4F))));
+                () -> new nightSwordItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,5,-2.4F)).rarity(Rarity.RARE)));
     public static final DeferredItem<PickaxeItem> night_pickaxe = ITEMS.register("night_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1,-2.8F))));
+            () -> new nightPickaxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.5f,-2.8F)).rarity(Rarity.RARE)));
     public static final DeferredItem<AxeItem> night_axe = ITEMS.register("night_axe",
-            () -> new nightAxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,5,-3.0F))));
+            () -> new nightAxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,8,-3.0F)).rarity(Rarity.RARE)));
     public static final DeferredItem<ShovelItem> night_shovel = ITEMS.register("night_shovel",
-            () -> new ShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.5f,-3.0F))));
+            () -> new ShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,2f,-3.0F)).rarity(Rarity.RARE)));
     public static final DeferredItem<HoeItem> night_hoe = ITEMS.register("night_hoe",
-            () -> new HoeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.0f,0.0F))));
+            () -> new HoeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.0f,0.0F)).rarity(Rarity.RARE)));
 
     //end of that field
 

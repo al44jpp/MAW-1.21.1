@@ -38,7 +38,6 @@ public class wish_appleItem extends Item {
         if(!level.isClientSide){
             if (livingEntity instanceof Player player){
                 if(player instanceof ServerPlayer serverPlayer){
-                    assert (player != null);
                     player.getCooldowns().addCooldown(this,2000);
 
 
