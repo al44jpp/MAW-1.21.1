@@ -26,7 +26,7 @@ public class nightSwordItem extends SwordItem {
     final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
     @Override
-    public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, LivingEntity attacker) {
+    public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
         if(attacker instanceof Player player) {
 
             Level level = attacker.level();
@@ -50,7 +50,7 @@ public class nightSwordItem extends SwordItem {
         return super.hurtEnemy(stack, target, attacker);
     }
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> tooltipComponents, @NotNull TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
         tooltipComponents.add(Component.translatable("tooltip.makeawish.night_sword"));
     }
