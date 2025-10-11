@@ -46,6 +46,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.starwood_door.get(),
                 block ->createDoorTable(ModBlocks.starwood_door.get()));
 
+        dropSelf(ModBlocks.moon_altar.get());
+
 
 
 

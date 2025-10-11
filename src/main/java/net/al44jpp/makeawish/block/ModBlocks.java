@@ -1,6 +1,9 @@
 package net.al44jpp.makeawish.block;
 
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.SimpleMapCodec;
 import net.al44jpp.makeawish.MAW;
+import net.al44jpp.makeawish.block.custom.moon_altarBlock;
 import net.al44jpp.makeawish.item.ModItems;
 import net.al44jpp.makeawish.worldgen.tree.ModTreeGrowers;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -74,6 +77,10 @@ public class ModBlocks {
     public static final DeferredBlock<TrapDoorBlock> starwood_trapdoor=registerBlock("starwood_trapdoor",
             ()-> new TrapDoorBlock(BlockSetType.ACACIA,
                     BlockBehaviour.Properties.of().strength(2f).sound(SoundType.WOOD).noOcclusion()));
+
+    public static final DeferredBlock<Block> moon_altar=registerBlock("moon_altar",
+            ()->new moon_altarBlock(BlockBehaviour.Properties.of().strength(5.0f,1200).sound(SoundType.STONE).noOcclusion()));
+
 
 
 

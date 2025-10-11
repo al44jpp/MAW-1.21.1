@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.wish);
                         output.accept(ModItems.wish_fragment);
+                        output.accept(ModBlocks.moon_altar);
                         output.accept(ModItems.wish_apple);
                         output.accept(ModItems.night_sword);
                         output.accept(ModItems.night_pickaxe);
