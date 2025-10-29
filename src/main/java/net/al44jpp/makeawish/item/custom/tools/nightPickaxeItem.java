@@ -1,9 +1,11 @@
 package net.al44jpp.makeawish.item.custom.tools;
 
+import net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.worldgen.ModBiomes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -11,6 +13,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
@@ -49,14 +53,13 @@ public class nightPickaxeItem extends PickaxeItem {
 
                     //if the player is eligible to a mining speed boost, apply that boost to them.
                     if(mining_power_boost>0){
-                        player.removeEffect(MobEffects.DIG_SPEED);
-                        player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED,60,Math.min(5,(int)mining_power_boost)-1));
-
+                        player.getAttribute(Attributes.BLOCK_BREAK_SPEED).removeModifier(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"aaa"));
+                        player.getAttribute(Attributes.BLOCK_BREAK_SPEED).addOrReplacePermanentModifier(new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"aaa"),mining_power_boost/3, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
                     }
                     //check if the number of blocks mined is sufficient and give a mining speed bonus if so.
                     if(mining_power_boost>=0 && blocks_to_mine <= 0){
                         mining_power_boost += 1;
-                        if(mining_power_boost<=5){
+                        if(mining_power_boost<=6){
                             serverLevel.sendParticles(serverPlayer,ParticleTypes.FIREWORK,false,player.getX(),player.getY(),player.getZ(),
                                     (int)Math.pow(4,(int)mining_power_boost),1,1,1,0.1);
                         }
@@ -71,8 +74,8 @@ public class nightPickaxeItem extends PickaxeItem {
                     //this will be canceled if the player mines another block.
                     blocks_to_mine-=1;
                     task.cancel(true);
-                    System.out.println(task.getDelay(TimeUnit.MILLISECONDS));
-                    task = executorService.schedule(resetMiningSpeedBonus(),15,TimeUnit.SECONDS);
+                    task = executorService.schedule(resetMiningSpeedBonus(player),15,TimeUnit.SECONDS);
+                    serverLevel.sendParticles(ParticleTypes.CRIT,pos.getX(),pos.getY(),pos.getZ(),25,0.5f,0.5f,0.5f,0);
                 }
 
             }
@@ -86,9 +89,10 @@ public class nightPickaxeItem extends PickaxeItem {
         tooltipComponents.add(Component.translatable("tooltip.makeawish.night_pickaxe"));
     }
 
-    public Runnable resetMiningSpeedBonus(){
+    private Runnable resetMiningSpeedBonus(Player player){
         return ()->{
             mining_power_boost = 0;
+            player.getAttribute(Attributes.BLOCK_BREAK_SPEED).removeModifier(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"aaa"));
             blocks_to_mine = 2;
         };
     }
