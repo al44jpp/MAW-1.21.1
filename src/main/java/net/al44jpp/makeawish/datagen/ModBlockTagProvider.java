@@ -30,6 +30,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.starwood_plank.get())
                 .add(ModBlocks.starwood_log.get());
 
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.night_dirt.get());
+
         tag(BlockTags.PLANKS)
                 .add(ModBlocks.starwood_plank.get());
 

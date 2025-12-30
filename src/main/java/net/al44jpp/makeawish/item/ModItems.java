@@ -43,7 +43,7 @@ public class ModItems {
     public static final DeferredItem<AxeItem> night_axe = ITEMS.register("night_axe",
             () -> new nightAxeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,8,-3.0F)).rarity(Rarity.RARE)));
     public static final DeferredItem<ShovelItem> night_shovel = ITEMS.register("night_shovel",
-            () -> new nightShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,2f,-3.0F).withModifierAdded(Attributes.SCALE,new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"scale_from_shovel"),nightShovelItem.getScaleModifier(), AttributeModifier.Operation.ADD_VALUE),EquipmentSlotGroup.HAND)).rarity(Rarity.RARE)));
+            () -> new nightShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,2f,-3.0F)).rarity(Rarity.RARE)));
     public static final DeferredItem<HoeItem> night_hoe = ITEMS.register("night_hoe",
             () -> new HoeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.0f,0.0F)).rarity(Rarity.RARE)));
 

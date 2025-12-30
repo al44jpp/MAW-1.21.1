@@ -1,6 +1,7 @@
-// 1.21.1	2025-08-06T23:20:35.2356055	Block States: makeawish
+// 1.21.1	2025-12-30T15:51:38.4537918	Block States: makeawish
 485a72f43768d051cfe0d8b4387780bda89534e8 assets/makeawish/blockstates/deepslate_night_crystal_ore.json
 eabe3b0c4b88b347dd78b60e5e68a744ad24c0e4 assets/makeawish/blockstates/night_crystal_block.json
+89474b24e258ebdbc8ba19d5b10c08cec0b02c73 assets/makeawish/blockstates/night_dirt.json
 863df7dbd0f8f8a26eaa7a1d6970ad2f15e2d497 assets/makeawish/blockstates/starwood_button.json
 3f677d5baf37f80f4b34449328d4ccf539bfd1bc assets/makeawish/blockstates/starwood_door.json
 6d2f820e9c84898a360f97b2a3f48aa370d37a44 assets/makeawish/blockstates/starwood_fence.json
@@ -15,6 +16,7 @@ d1b7fe3d1dc6525fea079e2b57794e5110f324e2 assets/makeawish/blockstates/starwood_t
 77a2d1d93991f74ce3823fff15c07a0ae451c457 assets/makeawish/blockstates/stone_night_crystal_ore.json
 e9589ccde4de3f12bae988635346d38de13d5f37 assets/makeawish/models/block/deepslate_night_crystal_ore.json
 383e815f990d4c9f46d6a71a6acc30db53f9c2ad assets/makeawish/models/block/night_crystal_block.json
+26597e4d3e7ef9aa6e085acd48ae5fbbc8b20d80 assets/makeawish/models/block/night_dirt.json
 496e803632a68b4a60bd34c810ea21b60675ab61 assets/makeawish/models/block/starwood_button.json
 e529d795f8b437c53f7f7401b06216b02e824951 assets/makeawish/models/block/starwood_button_pressed.json
 3d3ec5754b63517b2d038240fde32f35d301b1fd assets/makeawish/models/block/starwood_door_bottom_left.json
@@ -48,6 +50,7 @@ fa053cf68066481e8cbcc3a089d7d4a85705f2eb assets/makeawish/models/block/starwood_
 eef509e7c7710f7ae80bec1c301666a18a91cee0 assets/makeawish/models/block/stone_night_crystal_ore.json
 5ad1ae060a7ddbba06c588b8c5d0a8b4220d2eba assets/makeawish/models/item/deepslate_night_crystal_ore.json
 f867d2d193dac54254da9cd6db2db706a6bbc31d assets/makeawish/models/item/night_crystal_block.json
+205f5d2cee12bf2a31a6ade75bf00ce7e52d2f7f assets/makeawish/models/item/night_dirt.json
 6fc92a95d60996a58a1714c08ae00433d9244802 assets/makeawish/models/item/starwood_button.json
 1b7930c6fb203b1c73c078518692370d6d8855d0 assets/makeawish/models/item/starwood_fence.json
 14adfa74baa3f8bce3162e791d8d04ba61347831 assets/makeawish/models/item/starwood_fence_gate.json

@@ -1,5 +1,6 @@
-// 1.21.1	2025-08-07T11:45:21.300824	Loot Tables
+// 1.21.1	2025-12-30T15:51:38.4537918	Loot Tables
 b13594690cd416667164e1db5b2a776f26a390c3 data/makeawish/loot_table/blocks/deepslate_night_crystal_ore.json
+85bc59b27e6b466f080d13d62a27cc8cac31791e data/makeawish/loot_table/blocks/moon_altar.json
 d7413099689ce20ed870580cf988259ee12cbeed data/makeawish/loot_table/blocks/night_crystal_block.json
 a3688520d11b5448482f945266463b4265a4e330 data/makeawish/loot_table/blocks/starwood_button.json
 3d6b246d9ed173c55eac7c2cd5569241a9473a51 data/makeawish/loot_table/blocks/starwood_door.json

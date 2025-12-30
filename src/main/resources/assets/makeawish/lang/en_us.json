@@ -5,7 +5,7 @@
   "item.makeawish.wish_apple": "The infinite wished apple",
   "item.makeawish.night_sword": "night sword",
   "item.makeawish.night_pickaxe": "night pickaxe",
-  "item.makeawish.night_shoveld": "night shovel",
+  "item.makeawish.night_shovel": "night shovel",
   "item.makeawish.night_axe": "night axe",
   "item.makeawish.night_hoe": "night hoe",
 
@@ -30,7 +30,8 @@
   "tooltip.makeawish.night_crystal": "A magical crystal that awakens its powers at night.",
   "tooltip.makeawish.night_axe": "A powerful tool created using night essence. This axe uses the §dpower of the night§r to gradually §eheal§r its owner.",
   "tooltip.makeawish.night_sword": "A powerful tool created using night essence. This sword uses the §dpower of the night§r to deal §eadditional damage§r and §edisorientate§r foes.",
-  "tooltip.makeawish.night_pickaxe": "A powerful tool created using night essence. This sword uses the §dpower of the night§r to mine §efaster§r with every §dblock§r.",
+  "tooltip.makeawish.night_pickaxe": "A powerful tool created using night essence. This pickaxe uses the §dpower of the night§r to mine §efaster§r with every §dblock§r.",
+  "tooltip.makeawish.night_shovel": "A powerful tool created using night essence. This shovel uses the §dpower of the night§r to §ebecome multifunction §rand §eplace temporary blocks§r.",
 
   "creativetab.makeawish.wish_items": "al44jpp's make a wish"
 }

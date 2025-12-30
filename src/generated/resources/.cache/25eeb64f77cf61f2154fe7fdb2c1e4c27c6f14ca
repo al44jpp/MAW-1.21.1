@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-02T20:22:01.0572825	Tags for minecraft:block mod id makeawish
+// 1.21.1	2025-12-30T15:51:38.4443384	Tags for minecraft:block mod id makeawish
 f663e5fd72200820f598e252b7f4f3d58ac9cf05 data/makeawish/tags/block/incorrect_for_night_crystal_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data/makeawish/tags/block/needs_night_crystal_tool.json
 58df1d46f79d6f9c308ce00aab5972f0e15bc3db data/makeawish/tags/block/starwood_logs.json
@@ -7,5 +7,6 @@ e83369b7eefb0a0b04e9973a96ff65a55ee0cdd8 data/minecraft/tags/block/fence_gates.j
 58df1d46f79d6f9c308ce00aab5972f0e15bc3db data/minecraft/tags/block/logs_that_burn.json
 172049337dc3a4a3e4dee1c8c20bf70aff29d428 data/minecraft/tags/block/mineable/axe.json
 51265dd339ae90258153bde9b97ac063fdd5c11d data/minecraft/tags/block/mineable/pickaxe.json
+c2cb1e7eba17e771aef2b7be5c0b5da78d9e8290 data/minecraft/tags/block/mineable/shovel.json
 51265dd339ae90258153bde9b97ac063fdd5c11d data/minecraft/tags/block/needs_diamond_tool.json
 0874d3c1cd8d32b03a5eca39a11cd993fd710f82 data/minecraft/tags/block/planks.json

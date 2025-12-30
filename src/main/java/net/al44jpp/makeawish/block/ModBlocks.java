@@ -81,8 +81,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> moon_altar=registerBlock("moon_altar",
             ()->new moon_altarBlock(BlockBehaviour.Properties.of().strength(5.0f,1200).sound(SoundType.STONE).noOcclusion()));
 
-
-
+    public static final DeferredBlock<Block> night_dirt = registerBlock("night_dirt",
+            ()->new Block(BlockBehaviour.Properties.of().strength(0f).sound(SoundType.ROOTED_DIRT).instabreak().noLootTable()));
 
 
 

@@ -51,6 +51,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockItem(ModBlocks.starwood_trapdoor,"_bottom");
         BlockItem(ModBlocks.starwood_log);
 
+        BlockWithItem(ModBlocks.night_dirt);
+
 
     }
 
