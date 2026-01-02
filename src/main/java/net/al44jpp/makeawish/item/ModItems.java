@@ -23,7 +23,7 @@ public class ModItems {
 
 
     public static final DeferredItem<Item> wish = ITEMS.register("wish",
-            ()-> new Item(new Item.Properties()));
+            ()-> new WishItem(new Item.Properties().rarity(Rarity.EPIC).fireResistant().stacksTo(1)));
 
     public static final DeferredItem<Item> wish_fragment = ITEMS.register("wish_fragment",
             ()-> new Item(new Item.Properties()));

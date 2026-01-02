@@ -1,6 +1,7 @@
 package net.al44jpp.makeawish;
 
 import net.al44jpp.makeawish.block.ModBlocks;
+import net.al44jpp.makeawish.entity.ModEntities;
 import net.al44jpp.makeawish.item.ModCreativeModeTabs;
 import net.al44jpp.makeawish.item.ModItems;
 import net.al44jpp.makeawish.worldgen.terrablender.ModOverworldRegion;
@@ -44,6 +45,7 @@ public class MAW {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         Regions.register(new ModOverworldRegion(ResourceLocation.fromNamespaceAndPath(MAW.MOD_ID,"starwood_region"),1));
 
