@@ -6,6 +6,7 @@ import net.al44jpp.makeawish.item.custom.tools.nightAxeItem;
 import net.al44jpp.makeawish.item.custom.tools.nightPickaxeItem;
 import net.al44jpp.makeawish.item.custom.tools.nightShovelItem;
 import net.al44jpp.makeawish.item.custom.tools.nightSwordItem;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -32,7 +33,7 @@ public class ModItems {
             ()-> new night_crystalItem(new Item.Properties().rarity(Rarity.UNCOMMON)));
 
     public static final DeferredItem<Item> wish_apple = ITEMS.register("wish_apple",
-            ()-> new wish_appleItem(new Item.Properties().food(ModFoodProperties.wish_apple).rarity(Rarity.EPIC)));
+            ()-> new wish_appleItem(new Item.Properties().food(ModFoodProperties.wish_apple).rarity(Rarity.EPIC).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true)));
 
 
         //tools

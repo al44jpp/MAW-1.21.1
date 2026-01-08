@@ -9,7 +9,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -79,6 +81,17 @@ public class wish_appleItem extends Item {
                 serverLevel.sendParticles(ParticleTypes.FIREWORK,livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(), 15, 0.5, 2, 0.5, 0);
             }
         }
+    }
+
+
+    @Override
+    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity item) {
+        Double randomDouble = (Math.random()-0.5)*2*3.1415d;
+        if(item.level() instanceof  ServerLevel level){
+            level.sendParticles(ParticleTypes.FIREWORK,item.getX(),item.getY(),item.getZ(),2,0.1d,1,0.1d,0);
+            level.sendParticles(ParticleTypes.FIREWORK,item.getX()+Math.cos(randomDouble),item.getY(),item.getZ()+Math.sin(randomDouble),1,0,0,0,0);
+        }
+        return super.onEntityItemUpdate(stack, item);
     }
 }
 

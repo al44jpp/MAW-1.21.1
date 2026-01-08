@@ -2,9 +2,13 @@ package net.al44jpp.makeawish;
 
 import net.al44jpp.makeawish.block.ModBlocks;
 import net.al44jpp.makeawish.entity.ModEntities;
+import net.al44jpp.makeawish.entity.client.WishProjectileRenderer;
+import net.al44jpp.makeawish.entity.custom.WishProjectileEntity;
 import net.al44jpp.makeawish.item.ModCreativeModeTabs;
 import net.al44jpp.makeawish.item.ModItems;
 import net.al44jpp.makeawish.worldgen.terrablender.ModOverworldRegion;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -88,7 +92,7 @@ public class MAW {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.wish_projectile.get(), WishProjectileRenderer::new);
         }
     }
 }
