@@ -86,10 +86,10 @@ public class wish_appleItem extends Item {
 
     @Override
     public boolean onEntityItemUpdate(ItemStack stack, ItemEntity item) {
-        Double randomDouble = (Math.random()-0.5)*2*3.1415d;
+        double randomDouble = (Math.random()-0.5)*2*3.1415d;
         if(item.level() instanceof  ServerLevel level){
             level.sendParticles(ParticleTypes.FIREWORK,item.getX(),item.getY(),item.getZ(),2,0.1d,1,0.1d,0);
-            level.sendParticles(ParticleTypes.FIREWORK,item.getX()+Math.cos(randomDouble),item.getY(),item.getZ()+Math.sin(randomDouble),1,0,0,0,0);
+            level.sendParticles(ParticleTypes.FIREWORK,item.getX()+Math.cos(randomDouble),item.getY()+0.2f,item.getZ()+Math.sin(randomDouble),1,0,0,0,0);
         }
         return super.onEntityItemUpdate(stack, item);
     }

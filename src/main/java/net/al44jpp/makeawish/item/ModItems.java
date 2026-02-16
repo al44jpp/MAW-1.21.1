@@ -2,6 +2,8 @@ package net.al44jpp.makeawish.item;
 
 import  net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.item.custom.*;
+import net.al44jpp.makeawish.item.custom.armor.ModArmorMaterials;
+import net.al44jpp.makeawish.item.custom.armor.WhishChesplateItem;
 import net.al44jpp.makeawish.item.custom.tools.nightAxeItem;
 import net.al44jpp.makeawish.item.custom.tools.nightPickaxeItem;
 import net.al44jpp.makeawish.item.custom.tools.nightShovelItem;
@@ -12,6 +14,7 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -47,6 +50,12 @@ public class ModItems {
             () -> new nightShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,2f,-3.0F)).rarity(Rarity.RARE)));
     public static final DeferredItem<HoeItem> night_hoe = ITEMS.register("night_hoe",
             () -> new HoeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.0f,0.0F)).rarity(Rarity.RARE)));
+
+        //armor
+
+    public static final DeferredItem<ArmorItem> wish_chestplate = ITEMS.register("wish_chestplate",
+            ()-> new WhishChesplateItem(ModArmorMaterials.WISH_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
 
     //end of that field
 
