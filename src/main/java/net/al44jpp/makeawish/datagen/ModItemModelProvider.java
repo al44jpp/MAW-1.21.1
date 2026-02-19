@@ -60,6 +60,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.night_hoe);
 
         trimmedArmorItem(ModItems.wish_chestplate);
+        trimmedArmorItem(ModItems.wish_leggings);
+        trimmedArmorItem(ModItems.wish_helmet);
+        trimmedArmorItem(ModItems.wish_boots);
     }
 
 

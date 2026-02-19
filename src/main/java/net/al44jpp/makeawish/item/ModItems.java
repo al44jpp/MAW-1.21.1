@@ -3,18 +3,14 @@ package net.al44jpp.makeawish.item;
 import  net.al44jpp.makeawish.MAW;
 import net.al44jpp.makeawish.item.custom.*;
 import net.al44jpp.makeawish.item.custom.armor.ModArmorMaterials;
-import net.al44jpp.makeawish.item.custom.armor.WhishChesplateItem;
+import net.al44jpp.makeawish.item.custom.armor.WhishArmorItem;
+
 import net.al44jpp.makeawish.item.custom.tools.nightAxeItem;
 import net.al44jpp.makeawish.item.custom.tools.nightPickaxeItem;
 import net.al44jpp.makeawish.item.custom.tools.nightShovelItem;
 import net.al44jpp.makeawish.item.custom.tools.nightSwordItem;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -54,8 +50,20 @@ public class ModItems {
         //armor
 
     public static final DeferredItem<ArmorItem> wish_chestplate = ITEMS.register("wish_chestplate",
-            ()-> new WhishChesplateItem(ModArmorMaterials.WISH_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+            ()-> new WhishArmorItem(ModArmorMaterials.WISH_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19)).rarity(Rarity.EPIC)));
+
+    public static final DeferredItem<ArmorItem> wish_leggings = ITEMS.register("wish_leggings",
+            ()-> new WhishArmorItem(ModArmorMaterials.WISH_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19)).rarity(Rarity.EPIC)));
+
+    public static final DeferredItem<ArmorItem> wish_helmet = ITEMS.register("wish_helmet",
+            ()-> new WhishArmorItem(ModArmorMaterials.WISH_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19)).rarity(Rarity.EPIC)));
+
+    public static final DeferredItem<ArmorItem> wish_boots = ITEMS.register("wish_boots",
+            ()-> new WhishArmorItem(ModArmorMaterials.WISH_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19)).rarity(Rarity.EPIC)));
 
     //end of that field
 
