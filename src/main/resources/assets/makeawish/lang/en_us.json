@@ -9,6 +9,9 @@
   "item.makeawish.night_axe": "night axe",
   "item.makeawish.night_hoe": "night hoe",
   "item.makeawish.wish_chestplate": "the protective wished chestplate",
+  "item.makeawish.wish_leggings": "the protective wished leggings",
+  "item.makeawish.wish_boots": "the protective wished boots",
+  "item.makeawish.wish_helmet": "the protective wished helmet",
 
   "block.makeawish.night_crystal_block": "Block of night crystal",
   "block.makeawish.stone_night_crystal_ore": "night crystal crystal ore",
@@ -26,6 +29,8 @@
   "block.makeawish.starwood_trapdoor": "starwood trapdoor",
   "block.makeawish.starwood_log": "starwood log",
   "block.makeawish.moon_altar": "Moon Altar",
+
+  "effect.makeawish.regaining_magic": "regaining magic",
 
 
   "tooltip.makeawish.night_crystal": "A magical crystal that awakens its powers at night.",

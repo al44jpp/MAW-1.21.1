@@ -1,6 +1,8 @@
 package net.al44jpp.makeawish.item.custom;
 
+import net.al44jpp.makeawish.effect.ModEffects;
 import net.al44jpp.makeawish.item.ModItems;
+import net.al44jpp.makeawish.item.custom.util.LegendaryItem;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -9,6 +11,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -38,25 +42,29 @@ public class wish_appleItem extends Item {
     public @NotNull ItemStack finishUsingItem(@NotNull ItemStack stack, @NotNull Level level, @NotNull LivingEntity livingEntity) {
         ItemStack  itemStack = super.finishUsingItem(stack,level,livingEntity);
         if(!level.isClientSide){
-            if (livingEntity instanceof Player player){
-                if(player instanceof ServerPlayer serverPlayer){
-                    player.getCooldowns().addCooldown(this,2000);
+            if (livingEntity instanceof Player player && player instanceof ServerPlayer serverPlayer){
+                if(!player.hasEffect(ModEffects.REGAINING_MAGIC)){
 
+                    player.addEffect(new MobEffectInstance(ModEffects.REGAINING_MAGIC,2400));
+                    player.addEffect(new MobEffectInstance(MobEffects.SATURATION,3600,10));
+                    player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION,3600,4));
+                    player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,3600,1));
 
-                    player.getInventory().add(new ItemStack(ModItems.wish_apple.get()));
                     player.sendSystemMessage(Component.literal("the power of the apple fades... It needs to recover."));
                     level.playSound(null,player.getX(),player.getY(),player.getZ(),SoundEvents.BEACON_DEACTIVATE,SoundSource.PLAYERS);
 
-                    serverPlayer.connection.send(new ClientboundContainerSetContentPacket(//refreshes the player's slot on client
-                            player.containerMenu.containerId,
-                            player.containerMenu.getStateId(),
-                            player.containerMenu.getItems(),
-                            ItemStack.EMPTY
-                    ));
                 }
-
+                player.getInventory().add(new ItemStack(ModItems.wish_apple.get()));
+                serverPlayer.connection.send(new ClientboundContainerSetContentPacket(//refreshes the player's slot on client
+                        player.containerMenu.containerId,
+                        player.containerMenu.getStateId(),
+                        player.containerMenu.getItems(),
+                        ItemStack.EMPTY
+                ));
             }
+
         }
+
         return itemStack;
     }
 
@@ -74,7 +82,7 @@ public class wish_appleItem extends Item {
     @Override
     public void onUseTick(Level level, LivingEntity livingEntity, ItemStack stack, int remainingUseDuration) {
         super.onUseTick(level, livingEntity, stack, remainingUseDuration);
-        if (remainingUseDuration%4 == 0){
+        if (remainingUseDuration%4 == 0 && livingEntity instanceof Player player && !player.hasEffect(ModEffects.REGAINING_MAGIC)){
             level.playSound(null, livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(), SoundEvents.AMETHYST_BLOCK_PLACE, SoundSource.AMBIENT, 20f, 33-remainingUseDuration);
             if (level instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(ParticleTypes.WARPED_SPORE,livingEntity.getX(),livingEntity.getY(),livingEntity.getZ(), 120, 0.5, 1, 0.5, 0);
@@ -83,15 +91,14 @@ public class wish_appleItem extends Item {
         }
     }
 
-
     @Override
-    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity item) {
-        double randomDouble = (Math.random()-0.5)*2*3.1415d;
-        if(item.level() instanceof  ServerLevel level){
-            level.sendParticles(ParticleTypes.FIREWORK,item.getX(),item.getY(),item.getZ(),2,0.1d,1,0.1d,0);
-            level.sendParticles(ParticleTypes.FIREWORK,item.getX()+Math.cos(randomDouble),item.getY()+0.2f,item.getZ()+Math.sin(randomDouble),1,0,0,0,0);
-        }
-        return super.onEntityItemUpdate(stack, item);
+    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+        LegendaryItem legendaryItem = new LegendaryItem(stack,entity);
+        legendaryItem.SpawnLegendaryParticles();
+        return super.onEntityItemUpdate(stack,entity);
     }
+
+
+
 }
 

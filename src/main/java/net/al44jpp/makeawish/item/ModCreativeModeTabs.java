@@ -31,7 +31,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.night_axe);
                         output.accept(ModItems.night_shovel);
                         output.accept(ModItems.night_hoe);
+                        output.accept(ModItems.wish_helmet);
                         output.accept(ModItems.wish_chestplate);
+                        output.accept(ModItems.wish_leggings);
+                        output.accept(ModItems.wish_boots);
                         output.accept(ModBlocks.stone_night_crystal_ore);
                         output.accept(ModBlocks.deepslate_night_crystal_ore);
                         output.accept(ModBlocks.night_crystal_block);
