@@ -5,10 +5,7 @@ import net.al44jpp.makeawish.item.custom.*;
 import net.al44jpp.makeawish.item.custom.armor.ModArmorMaterials;
 import net.al44jpp.makeawish.item.custom.armor.WhishArmorItem;
 
-import net.al44jpp.makeawish.item.custom.tools.nightAxeItem;
-import net.al44jpp.makeawish.item.custom.tools.nightPickaxeItem;
-import net.al44jpp.makeawish.item.custom.tools.nightShovelItem;
-import net.al44jpp.makeawish.item.custom.tools.nightSwordItem;
+import net.al44jpp.makeawish.item.custom.tools.*;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
@@ -45,7 +42,7 @@ public class ModItems {
     public static final DeferredItem<ShovelItem> night_shovel = ITEMS.register("night_shovel",
             () -> new nightShovelItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,2f,-3.0F)).rarity(Rarity.RARE)));
     public static final DeferredItem<HoeItem> night_hoe = ITEMS.register("night_hoe",
-            () -> new HoeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.0f,0.0F)).rarity(Rarity.RARE)));
+            () -> new nightHoeItem(ModToolTiers.NIGHT_CRYSTAL,new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.NIGHT_CRYSTAL,1.0f,0.0F)).rarity(Rarity.RARE)));
 
         //armor
 
